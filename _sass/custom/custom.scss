@@ -1,0 +1,13 @@
+/*
+  Misc fixes
+*/
+
+.search-input {
+  color: $body-text-color;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
+  background-image: none;
+  background: $feedback-color;
+  border-radius: 4px;
+}

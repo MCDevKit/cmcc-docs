@@ -4,6 +4,7 @@ description: >-
   Docs for CommandLang
 
 remote_theme: pmarsceill/just-the-docs
+color_scheme: dark
 
 github_username:  stirante
 
