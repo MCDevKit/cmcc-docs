@@ -377,3 +377,7 @@ func update() {
 Execute the `cmcc install` command.
 
 Add both behavior and resource pack to the world. Place a repeating command block and set its command to `function main` and `Redstone` to `Always active`.
+
+For aesthetics, add a wall of black wool behind the scores.
+
+Finished example: [Download](https://s3.eu-central-1.amazonaws.com/files.stirante.com/scores-example.zip)
