@@ -51,4 +51,4 @@ CommandLang offers a way to install project directly to the development packs or
 ## Running CommandLang in a world
 
 * Add both resource pack and behavior pack to the world
-* Place Repeating Command Block, set its command to `function main`, delay to 0 and make it 'always active'
+* Execute command `function init_ram` to create ram structure (bedrock room with command block)
