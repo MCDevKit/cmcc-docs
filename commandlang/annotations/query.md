@@ -1,12 +1,13 @@
 ---
 layout: page
 parent: Annotations
-title: OnQuery
+grand_parent: CommandLang
+title: Query
 ---
 
 # Query
 
-This annotation executes a function every time the value from Molang query becomes true. 
+This annotation binds a boolean value from Molang query to a field. 
 
 ***This annotation requires an entity behavior pack definition present in project in order to inject the animation controller.***
 
@@ -18,8 +19,6 @@ This annotation executes a function every time the value from Molang query becom
 ## Example
 
 ```
-@OnQuery(query="query.is_alive",id="minecraft:player")
-func aliveTrigger() {
-    >>say I'm alive!
-}
+@Query(query="query.is_alive",id="minecraft:player")
+define fieldName;
 ```

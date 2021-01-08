@@ -1,6 +1,7 @@
 ---
 layout: page
 parent: Tutorials
+grand_parent: CommandLang
 title: Physical Scoreboard
 ---
 

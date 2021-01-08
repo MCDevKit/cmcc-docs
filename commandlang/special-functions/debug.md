@@ -1,6 +1,7 @@
 ---
 layout: page
 parent: Special Functions
+grand_parent: CommandLang
 title: debug
 ---
 

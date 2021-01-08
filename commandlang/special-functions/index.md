@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Special Functions
+parent: CommandLang
 has_children: true
 ---
 

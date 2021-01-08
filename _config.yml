@@ -1,7 +1,7 @@
-title: CommandLang
+title: MCDevKit
 email: brzozowski.s.piotr@gmail.com
 description: >-
-  Docs for CommandLang
+  MCDevKit Docs
 
 remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
@@ -21,10 +21,10 @@ kramdown:
   parse_block_html: true
 
 markdown: kramdown
-url: https://docs.cmcc.stirante.com
+url: https://docs.mcdevkit.com
 aux_links:
-  "CommandLang":
-    - "https://cmcc.stirante.com"
+  "MCDevKit":
+    - "https://mcdevkit.com"
   
 
 

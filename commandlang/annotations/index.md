@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Annotations
+parent: CommandLang
 has_children: true
 ---
 

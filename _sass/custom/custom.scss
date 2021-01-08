@@ -1,4 +1,36 @@
 /*
+  Code highlighting fix
+ */
+
+.highlight .nl {
+  color: #9CDCFE;
+}
+.highlight .s2 {
+  color: #ce9178;
+}
+.highlight .mi, .highlight .mf {
+  color: #b5cea8;
+}
+.highlight .kc {
+  color: #569cd6;
+}
+.highlight .p {
+  color: #C8C8C8;
+}
+.highlight .err {
+  color: #6A9955;
+}
+pre.highlight, figure.highlight {
+  background-color: #1E1E1E;
+}
+code {
+  background-color: #1E1E1E;
+}
+div.highlighter-rouge {
+  background-color: #1E1E1E;
+}
+
+/*
   Misc fixes
 */
 

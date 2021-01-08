@@ -1,22 +1,24 @@
 ---
 layout: page
 parent: Special Functions
-title: tell
+grand_parent: CommandLang
+title: title
 ---
 
-# tell
+# title
 
-Compiles to `tellraw` command.
+Compiles to `titleraw` command.
 
 ## Usage
 
 ```
-tell(<target>, <message>);
+title(<target>, <title location>, <message>);
 ```
 
 ### Arguments
 
 * `target` - who should see the message. This argument accepts a raw selector as well as entity context.
+* `title location` - valid values are `actionbar`, `subtitle` and `title`
 * `message` - message to display. It supports string concatenation with defined fields.
 
 ## Example
@@ -26,6 +28,6 @@ define val;
 
 func showVal(recipient:context) {
     recipient.val = 15;
-    tell(recipient, "The value of val is " + recipient.val);
+    title(recipient, actionbar, "The value of val is " + recipient.val);
 }
 ```
