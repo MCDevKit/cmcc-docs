@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: fileListRecurse
 ---
 
 # fileListRecurse
 
-`fileListRecurse` is a function, that returns an array of file paths recursively, which means, that if the folder contains another folder, its contents will also be added to the array.
+Returns an array of file paths recursively, which means, that if the folder contains another folder, its contents will also be added to the array.
 
 ## Arguments
 

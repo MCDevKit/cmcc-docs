@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: fileBaseName
 ---
 
 # fileBaseName
 
-`fileBaseName` is a function, that returns a name from file path in first argument.
+Returns a name from file path in first argument.
 
 ## Arguments
 

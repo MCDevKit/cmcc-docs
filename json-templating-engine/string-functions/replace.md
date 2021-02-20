@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: String functions
 title: replace
 ---
 
 # replace
 
-`replace` is a function, that returns string from the first argument with occurrences of the second argument replaced by third argument.
+Returns string from the first argument with occurrences of the second argument replaced by third argument.
 
 ## Arguments
 

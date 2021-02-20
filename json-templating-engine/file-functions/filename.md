@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: fileName
 ---
 
 # fileName
 
-`fileName` is a function, that returns a name and extension from file path in first argument.
+Returns a name and extension from file path in first argument.
 
 ## Arguments
 

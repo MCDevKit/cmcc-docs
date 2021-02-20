@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: filePath
 ---
 
 # filePath
 
-`filePath` is a function, that returns a directory path from file path in first argument.
+Returns a directory path from file path in first argument.
 
 ## Arguments
 

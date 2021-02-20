@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: Image functions
 title: imageHeight
 ---
 
 # imageHeight
 
-`imageHeight` is a function, that returns an image height from file path in first argument.
+Returns an image height from file path in first argument.
 
 ## Arguments
 

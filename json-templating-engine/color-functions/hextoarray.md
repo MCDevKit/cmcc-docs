@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: Color functions
 title: hexToArray
 ---
 
 # hexToArray
 
-`hexToArray` is a function, that returns a color array from hex color string in first argument.
+Returns a color array from hex color string in first argument.
 
 ## Arguments
 

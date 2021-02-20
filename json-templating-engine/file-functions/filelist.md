@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: fileList
 ---
 
 # fileList
 
-`fileList` is a function, that returns an array of file names.
+Returns an array of file names.
 
 ## Arguments
 

@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: Image functions
 title: imageWidth
 ---
 
 # imageWidth
 
-`imageWidth` is a function, that returns an image width from file path in first argument.
+Returns an image width from file path in first argument.
 
 ## Arguments
 

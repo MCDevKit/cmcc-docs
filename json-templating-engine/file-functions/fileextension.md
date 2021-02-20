@@ -1,13 +1,13 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Functions
+parent: File functions
 title: fileExtension
 ---
 
 # fileExtension
 
-`fileExtension` is a function, that returns an extension from file path in first argument.
+Returns an extension from file path in first argument.
 
 ## Arguments
 
