@@ -19,8 +19,8 @@ title: fileListRecurse
 ```json
 {
   "$template": {
-    "{{#fileListRecurse('resources/textures', '*.png')": {
-      "{{index}}": "{{value}}"
+    "{{"{{#fileListRecurse('resources/textures', '*.png')"}}}}": {
+      "{{"{{index"}}}}": "{{"{{value"}}}}"
     }
   }
 }

@@ -19,7 +19,7 @@ title: filePath
 {
   "$template": {
     "$comment": "The field below will be 'resources/textures/particle/'",
-    "test": "{{filePath('resources/textures/particle/particles.png')}}"
+    "test": "{{"{{filePath('resources/textures/particle/particles.png')"}}}}"
   }
 }
 ```

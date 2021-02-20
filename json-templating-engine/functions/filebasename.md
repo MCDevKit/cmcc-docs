@@ -19,7 +19,7 @@ title: fileBaseName
 {
   "$template": {
     "$comment": "The field below will be 'particles'",
-    "test": "{{fileBaseName('resources/textures/particle/particles.png')}}"
+    "test": "{{"{{fileBaseName('resources/textures/particle/particles.png')"}}}}"
   }
 }
 ```

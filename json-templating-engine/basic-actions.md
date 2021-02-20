@@ -8,30 +8,30 @@ title: Basic Actions
 
 ## Value
 
-The most basic operation, you can do is replace a template string with a value e.g. `{{variable}}`.
-This action can be added in the middle of other text like this `key_{{variable}}`.
+The most basic operation, you can do is replace a template string with a value e.g. `{{"{{variable"}}}}`.
+This action can be added in the middle of other text like this `key_{{"{{variable"}}}}`.
 
 ## Casting Value
 
 An extension of the value action is casting value, which will force the template string to be a number. 
-It is used by adding `=` character at the beginning of a template string like so `{{=variable}}`.
+It is used by adding `=` character at the beginning of a template string like so `{{"{{=variable"}}}}`.
 
 ## Iteration
 
 Iteration is an action, that will repeat a JSON element over an array, or a range. 
-It is triggered by beginning a template string with `#` e.g. `{{#array}}`.
+It is triggered by beginning a template string with `#` e.g. `{{"{{#array"}}}}`.
 
 Every iteration will also expose variables:
  - index: a current index of iteration
- - value: a current element of iteration (this can be changed like this `{{#array as element}}`)
+ - value: a current element of iteration (this can be changed like this `{{"{{#array as element"}}}}`)
 
 Additionally, if the current iteration element is an object, all it's properties will be available without specifying the element name.
-So for example if you are iteration over array of objects and all objects have properties `id`, instead of using `{{value.id}}` you can just use `{{id}}`.
+So for example if you are iteration over array of objects and all objects have properties `id`, instead of using `{{"{{value.id"}}}}` you can just use `{{id}}`.
 
 ## Predicate
 
 Predicate will add its value only if the condition inside it is true.
-It is used by adding `?` character at the beginning of a template string like so `{{?condition}}`.
+It is used by adding `?` character at the beginning of a template string like so `{{"{{?condition"}}}}`.
 
 ## Example using all actions
 
@@ -41,12 +41,12 @@ The value of each field will be multiplied by 10 for numbers between 3 and 5 and
 ```json
 {
   "$template": {
-    "{{#0..5}}": {
-      "{{?value > 2 && value < 5}}": {
-        "key_{{value}}": "{{=value * 10}}"
+    "{{"{{#0..5"}}}}": {
+      "{{"{{?value > 2 && value < 5"}}}}": {
+        "key_{{"{{value"}}}}": "{{"{{=value * 10"}}}}"
       },
-      "{{?value <= 2 || value == 5}}": {
-        "key_{{value}}": "{{=value}}"
+      "{{"{{?value <= 2 || value == 5"}}}}": {
+        "key_{{"{{value"}}}}": "{{"{{=value"}}}}"
       }
     }
   }

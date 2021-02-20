@@ -21,7 +21,7 @@ title: replace
 {
   "$template": {
     "$comment": "The field below will be 'this_is_a_test'",
-    "test": "{{replace('this is a test', ' ', '_')}}"
+    "test": "{{"{{replace('this is a test', ' ', '_'"}})}}"
   }
 }
 ```

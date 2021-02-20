@@ -21,7 +21,7 @@ This is the most important template options. It allows you to set some variables
   },
   "$template": {
     "$comment": "The field below will be 'value'",
-    "test": "{{settings.setting1}}"
+    "test": "{{"{{settings.setting1"}}}}"
   }
 }
 ```
@@ -56,7 +56,7 @@ A very important option, that allows for creating multiple files from one templa
 {
   "$files": {
     "array": "1..5",
-    "fileName": "test_{{value}}"
+    "fileName": "test_{{"{{value"}}}}"
   },
   "$template": {
     "test": "{{value}}"
