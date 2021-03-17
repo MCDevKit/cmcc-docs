@@ -14,7 +14,8 @@
     },
     "ram_entity_identifier": {
       "type": "string",
-      "description": "Namespaced entity ID of ram entity"
+      "description": "Namespaced entity ID of ram entity",
+      "default": "cl:ram"
     },
     "build": {
       "type": "object",
@@ -36,7 +37,8 @@
         },
         "install_in_dev": {
           "type": "boolean",
-          "description": "Whether the project should be installed to development packs"
+          "description": "Whether the project should be installed to development packs",
+          "default": true
         },
         "mojang_folder": {
           "type": "string",
