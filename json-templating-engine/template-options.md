@@ -67,10 +67,20 @@ A very important option, that allows for creating multiple files from one templa
 
 ## Copy
 
-A minor option, that allows for completely copying contents of another file into current file.
+An option, that allows for completely copying contents of another file into current file. Copied contents are merged with modules and template.
 
 ```json
 {
   "$copy": "path/to/another/file.json"
+}
+```
+
+## Extend
+
+An option, that allows for merging one or more modules into the current template.
+
+```json
+{
+  "$extend": ["module_name"]
 }
 ```
