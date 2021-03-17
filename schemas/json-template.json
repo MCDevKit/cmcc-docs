@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://docs.mcdevkit.com/schemas/json-template.json",
+  "title": "JSON Template",
+  "type": "object",
+  "properties": {
+    "$template": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/animation_controller.1.10.0.json" },
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/geometry.1.12.0.json" },
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/animation.json" },
+        { "$ref": "https://raw.githubusercontent.com/BlueFrog130/minecraft-add-on-schemas/master/client_entity.schema.json" },
+        { "$ref": "https://raw.githubusercontent.com/BlueFrog130/minecraft-add-on-schemas/master/entity.schema.json" },
+        { "type": "object", "additionalProperties": true }
+      ]
+    },
+    "$extend": {
+      "type": "array",
+      "description": "Modules to merge with the template",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "$files": {
+      "description": "Definition, that allows for creating multiple files from one template",
+      "type": "object",
+      "properties": {
+        "array": {
+          "description": "An array, that controls the number of files created. This string will be evaluated as expression",
+          "type": "string"
+        },
+        "fileName": {
+          "description": "A string, that controls the name of files created. This string will be evaluated as expression",
+          "type": "string"
+        }
+      }
+    },
+    "$copy": {
+      "type": "string",
+      "description": "Path to a file, that will be merged with template"
+    },
+    "$scope": {
+      "type": "object",
+      "description": "A JSON Object that holds all information used during templating",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

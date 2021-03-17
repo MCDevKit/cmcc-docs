@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://docs.mcdevkit.com/schemas/json-template.json",
+  "title": "JSON Template",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "ram_entity_identifier": {
+      "type": "string",
+      "description": "Namespaced entity ID of ram entity"
+    },
+    "build": {
+      "type": "object",
+      "description": "Options for building",
+      "properties": {
+        "file_name": {
+          "type": "string",
+          "description": "Name of the built file"
+        }
+      }
+    },
+    "install": {
+      "type": "object",
+      "description": "Options for installing",
+      "properties": {
+        "save_folder": {
+          "type": "string",
+          "description": "Name of the save folder (not the save itself, it usually looks like this Dv1MYJtFAAA=)"
+        },
+        "install_in_dev": {
+          "type": "boolean",
+          "description": "Whether the project should be installed to development packs"
+        },
+        "mojang_folder": {
+          "type": "string",
+          "description": "Path to the com.mojang folder",
+          "default": "C:\\Users\\<user>\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang"
+        }
+      }
+    },
+    "$scope": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://docs.mcdevkit.com/schemas/json-template.json",
+  "title": "JSON Template",
+  "type": "object",
+  "properties": {
+    "$template": {
+      "type": "object",
+      "oneOf": [
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/animation_controller.1.10.0.json" },
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/geometry.1.12.0.json" },
+        { "$ref": "https://raw.githubusercontent.com/bedrock-studio/bedrock-json-schemas/master/animation.json" },
+        { "$ref": "https://raw.githubusercontent.com/BlueFrog130/minecraft-add-on-schemas/master/client_entity.schema.json" },
+        { "$ref": "https://raw.githubusercontent.com/BlueFrog130/minecraft-add-on-schemas/master/entity.schema.json" },
+        { "type": "object", "additionalProperties": true }
+      ]
+    },
+    "$module": {
+      "type": "string",
+      "description": "Module name"
+    }
+  },
+  "additionalProperties": false
+}
