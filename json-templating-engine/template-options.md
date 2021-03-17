@@ -2,6 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: Template options
+nav_order: 1
 ---
 
 # Template options

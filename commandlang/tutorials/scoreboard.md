@@ -175,10 +175,10 @@ We create a `counter.particle.templ` file:
     "format_version": "1.10.0",
     "particle_effect": {
       "description": {
-        "identifier": "example:{{name}}",
+        "identifier": "example:{{"{{name"}}}}",
         "basic_render_parameters": {
           "material": "particles_alpha",
-          "texture": "textures/particles/{{texture}}"
+          "texture": "textures/particles/{{"{{texture"}}}}"
         }
       },
       "components": {
@@ -199,17 +199,17 @@ We create a `counter.particle.templ` file:
           "relative_position": [0, 0, 0]
         },
         "minecraft:particle_appearance_billboard": {
-          "{{?size}}": {
-            "size": "{{size}}"
+          "{{"{{?size"}}}}": {
+            "size": "{{"{{size"}}}}"
           },
-          "{{?!size}}": {
+          "{{"{{?!size"}}}}": {
             "size": [0.15, 0.15]
           },
           "facing_camera_mode": "direction_z",
-          "{{?uv}}": {
-            "uv": "{{uv}}"
+          "{{"{{?uv"}}}}": {
+            "uv": "{{"{{uv"}}}}"
           },
-          "{{?!uv}}": {
+          "{{"{{?!uv"}}}}": {
             "uv": {
               "texture_width": 8,
               "texture_height": 8,
@@ -227,7 +227,7 @@ We create a `counter.particle.templ` file:
 
 `$files` object specifies how files will be generated. Our current configuration will generate a separate json file for every element in `particles` array, and the name of the file will begin with `name` field of the element. Particle identifiers will also include `name` field.
 
-In `minecraft:particle_appearance_billboard` component, `{{?size}}` means, that if the `size` field in data is not null, it will add the content to the current object. `{{?!size}}` is the same predicate, but negated, so content will be added if `size` field is null.
+In `minecraft:particle_appearance_billboard` component, `{{"{{?size"}}}}` means, that if the `size` field in data is not null, it will add the content to the current object. `{{"{{?!size"}}}}` is the same predicate, but negated, so content will be added if `size` field is null.
 
 ## Code
 
