@@ -21,7 +21,7 @@ Given scope
 ```json
 {
   "testObject": {
-    "test1": "someVal"
+    "test1": "someVal",
     "test2": "anotherVal"
   }
 }
