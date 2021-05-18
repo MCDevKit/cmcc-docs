@@ -29,7 +29,7 @@ context result = summon(<entity type>, <name tag> [spawn pos]);
 ## Example
 
 ```
-func testParse() {
+func testSummon() {
     context pig = summon("pig");
 }
 ```
