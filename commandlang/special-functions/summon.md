@@ -7,7 +7,8 @@ title: summon
 
 # summon
 
-Summons an entity and returns its context. Uses the same parameter order as `/summon` command
+Summons an entity and returns its context. Uses the same parameter order as `summon` command. 
+If the function return value is not used, the only generated command from this function will be `summon`.
 
 ## Usage
 
