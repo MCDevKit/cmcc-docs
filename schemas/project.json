@@ -17,6 +17,11 @@
       "description": "Namespaced entity ID of ram entity",
       "default": "cl:ram"
     },
+    "disable_text_frame": {
+      "type": "boolean",
+      "description": "Whether to disable collecting all say/tell/title commands into a text frame",
+      "default": true
+    },
     "build": {
       "type": "object",
       "description": "Options for building",
