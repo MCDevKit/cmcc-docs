@@ -2,10 +2,10 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: Utility functions
-title: mapValues
+title: mapValues (deprecated)
 ---
 
-# mapValues
+# mapValues (deprecated)
 
 Returns an array, where each element is replaced with the value from the specified map.
 

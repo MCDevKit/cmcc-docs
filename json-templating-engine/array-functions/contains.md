@@ -1,7 +1,7 @@
 ---
 layout: page
 grand_parent: JSON Templating Engine
-parent: Utility functions
+parent: Array functions
 title: contains
 ---
 
