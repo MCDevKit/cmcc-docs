@@ -38,11 +38,11 @@ the result will be
 ```json
 [
   {
-    "key": "test1"
+    "key": "test1",
     "value": "someVal"
   },
   {
-    "key": "test2"
+    "key": "test2",
     "value": "anotherVal"
   }
 ]
