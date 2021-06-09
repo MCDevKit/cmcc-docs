@@ -20,7 +20,7 @@ Returns whether first string argument contains second string argument.
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{contains('this_is_a_test', '_'"}})}}"
+    "test": "{{"{{contains('this_is_a_test', '_')}}"}}"
   }
 }
 ```

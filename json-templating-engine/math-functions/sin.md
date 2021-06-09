@@ -11,4 +11,4 @@ Returns the trigonometric sine of an angle in degrees.
 
 ## Arguments
 
-- number: An angle in degrees
+ - number: An angle in degrees

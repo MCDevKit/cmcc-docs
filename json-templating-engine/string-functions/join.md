@@ -20,7 +20,7 @@ Joins all values in a given array and returns as a string.
 {
   "$template": {
     "$comment": "For an array ['this', 'is', 'a', 'test'] the field below will be 'this_is_a_test'",
-    "test": "{{"{{join(arr, '_'"}})}}"
+    "test": "{{"{{join(arr, '_')}}"}}"
   }
 }
 ```

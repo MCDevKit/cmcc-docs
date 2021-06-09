@@ -7,4 +7,4 @@ title: pi
 
 # pi
 
-Returns the closest number to *pi*.
+Returns the closest number to pi.

@@ -7,7 +7,7 @@ title: flatMap
 
 # flatMap
 
-Returns an array, where every array from lambda is merged into source array.
+Returns a new array, where every array from lambda is merged into source array.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Returns an array, where every array from lambda is merged into source array.
 {
   "$template": {
     "$comment": "The field below will be [1, 2, 3, 4]",
-    "test": "{{"{{flatMap([[1, 2], 3, [4]])"}}}}"
+    "test": "{{"{{flatMap([[1, 2], 3, [4]])}}"}}"
   }
 }
 ```

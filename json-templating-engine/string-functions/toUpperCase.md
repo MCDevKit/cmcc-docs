@@ -19,7 +19,7 @@ Returns a string, where all letters are uppercase.
 {
   "$template": {
     "$comment": "The field below will be TEST",
-    "test": "{{"{{toUpperCase('Test')"}})}}"
+    "test": "{{"{{toUpperCase('Test'))}}"}}"
   }
 }
 ```

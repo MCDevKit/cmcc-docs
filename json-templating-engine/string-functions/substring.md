@@ -7,14 +7,13 @@ title: substring
 
 # substring
 
-Returns a string that is a substring of this string.
-The substring begins at the specified beginIndex and extends to the character at index endIndex - 1 or to the end of the string, if none specified.
+Returns a string that is a substring of this string. The substring begins at the specified beginIndex and extends to the character at index endIndex - 1 or to the end of the string, if none specified.
 
 ## Arguments
 
  - string: Text to transform
  - beginIndex: the beginning index, inclusive
- - endIndex: the ending index, exclusive
+ - endIndex: (optional) the ending index, exclusive
 
 ## Example
 
@@ -22,7 +21,7 @@ The substring begins at the specified beginIndex and extends to the character at
 {
   "$template": {
     "$comment": "The field below will be 45",
-    "test": "{{"{{substring('123456789', 3, 5)"}})}}"
+    "test": "{{"{{substring('123456789', 3, 5))}}"}}"
   }
 }
 ```

@@ -11,4 +11,4 @@ Returns the absolute value of a number.
 
 ## Arguments
 
-- number: A number
+ - number: A number

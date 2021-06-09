@@ -20,7 +20,7 @@ Returns an array from string.
 {
   "$template": {
     "$comment": "The field below will be ['this', 'is', 'a', 'test']",
-    "test": "{{"{{split('this_is_a_test', '_'"}})}}"
+    "test": "{{"{{split('this_is_a_test', '_')}}"}}"
   }
 }
 ```

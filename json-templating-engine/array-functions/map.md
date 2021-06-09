@@ -7,7 +7,7 @@ title: map
 
 # map
 
-Returns an array, where every element is mapped using provided lambda.
+Returns a new array, where every element is mapped to another value using provided lambda.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Returns an array, where every element is mapped using provided lambda.
 {
   "$template": {
     "$comment": "The field below will be [0, 2, 4, 6, 8]",
-    "test": "{{"{{map(0..4, x => x * 2)"}}}}"
+    "test": "{{"{{map(0..4, x => x => x * 2)}}"}}"
   }
 }
 ```

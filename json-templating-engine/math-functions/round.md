@@ -11,8 +11,8 @@ Returns the nearest number with specified precision.
 
 ## Arguments
 
-- number: A number to round
-- precision: A number of decimal places. If none specified, it will round to the nearest integer.
+ - number: A number to round
+ - precision: A number of decimal places. If none specified, it will round to the nearest integer.
 
 ## Example
 
@@ -20,7 +20,7 @@ Returns the nearest number with specified precision.
 {
   "$template": {
     "$comment": "The field below will be 3.142",
-    "test": "{{"{{round(3.1415, 3)"}}}}"
-}
+    "test": "{{"{{round(3.1415, 3)}}"}}"
+  }
 }
 ```

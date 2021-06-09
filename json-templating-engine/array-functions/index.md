@@ -5,6 +5,6 @@ parent: JSON Templating Engine
 has_children: true
 ---
 
-# Utility functions
+# Array functions
 
-Utility functions are related to manipulating scope data.
+Array functions are for getting information on and transforming arrays.

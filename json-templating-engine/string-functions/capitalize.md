@@ -19,7 +19,7 @@ Returns a string, where all letters are lowercase, and the first letter is upper
 {
   "$template": {
     "$comment": "The field below will be Test",
-    "test": "{{"{{capitalize('test')"}})}}"
+    "test": "{{"{{capitalize('test'))}}"}}"
   }
 }
 ```

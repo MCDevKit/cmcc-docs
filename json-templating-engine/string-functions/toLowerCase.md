@@ -2,7 +2,7 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: String functions
-title: toUpperCase
+title: toLowerCase
 ---
 
 # toLowerCase
@@ -19,7 +19,7 @@ Returns a string, where all letters are lowercase.
 {
   "$template": {
     "$comment": "The field below will be test",
-    "test": "{{"{{toLowerCase('Test')"}})}}"
+    "test": "{{"{{toUpperCase('Test'))}}"}}"
   }
 }
 ```

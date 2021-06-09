@@ -11,5 +11,5 @@ Returns the smaller of two numbers.
 
 ## Arguments
 
-- a: Number a
-- b: Number b
+ - a: Number a
+ - b: Number b

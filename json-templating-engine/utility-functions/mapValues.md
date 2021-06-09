@@ -30,7 +30,7 @@ for query
 ```json
 {
   "$template": {
-    "test": "{{"{{mapValues(testArray, map"}})}}"
+    "test": "{{"{{mapValues(testArray, map)}}"}}"
   }
 }
 ```

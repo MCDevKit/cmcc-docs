@@ -28,11 +28,10 @@ for query
 ```json
 {
   "$template": {
-    "test": "{{"{{keys(testObject"}})}}"
+    "test": "{{"{{keys(testObject)}}"}}"
   }
 }
 ```
-
 the result will be
 ```json
 [

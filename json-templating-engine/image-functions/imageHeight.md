@@ -18,7 +18,7 @@ Returns an image height from file path in first argument.
 ```json
 {
   "$template": {
-    "test": "{{"{{imageHeight('resources/textures/particle/particles.png')"}}}}"
+    "test": "{{"{{imageWidth('resources/textures/particle/particles.png')}}"}}"
   }
 }
 ```

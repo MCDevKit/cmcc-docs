@@ -20,7 +20,7 @@ Returns whether supplied array contains provided value.
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{contains(['asd', '123', 123, 9], '123')"}}}}"
+    "test": "{{"{{contains(['asd', '123', 123, 9], '123')}}"}}"
   }
 }
 ```
