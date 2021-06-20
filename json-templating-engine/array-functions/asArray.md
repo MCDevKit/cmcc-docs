@@ -30,7 +30,7 @@ for query
 ```json
 {
   "$template": {
-    "test": "{{"{{asArray(testObject, 'key', 'value')}}"}}"
+    "test": "{{"{{asArray(testObject, 'key', 'value')"}}}}"
   }
 }
 ```

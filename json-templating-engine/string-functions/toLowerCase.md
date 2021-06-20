@@ -19,7 +19,7 @@ Returns a string, where all letters are lowercase.
 {
   "$template": {
     "$comment": "The field below will be test",
-    "test": "{{"{{toUpperCase('Test'))}}"}}"
+    "test": "{{"{{toUpperCase('Test'))"}}}}"
   }
 }
 ```

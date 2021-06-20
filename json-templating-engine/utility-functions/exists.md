@@ -30,7 +30,7 @@ Scope
 {
   "$template": {
     "$comment": "The field below will be false",
-    "test": "{{"{{exists(map, '3')}}"}}"
+    "test": "{{"{{exists(map, '3')"}}}}"
   }
 }
 ```

@@ -19,7 +19,7 @@ Returns an integer hash of the string. Note that 32 bit size does not guarantee,
 {
   "$template": {
     "$comment": "The field below will be -1238115836",
-    "test": "{{"{{hash('this_is_a_test'))}}"}}"
+    "test": "{{"{{hash('this_is_a_test'))"}}}}"
   }
 }
 ```

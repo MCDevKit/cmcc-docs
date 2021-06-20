@@ -20,7 +20,7 @@ Returns an index of second string inside the firs string or -1 if not found.
 {
   "$template": {
     "$comment": "The field below will be 4",
-    "test": "{{"{{indexOf('this_is_a_test', '_is_')}}"}}"
+    "test": "{{"{{indexOf('this_is_a_test', '_is_')"}}}}"
   }
 }
 ```

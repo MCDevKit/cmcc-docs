@@ -20,7 +20,7 @@ Returns the remainder (modulo) of the two arguments.
 {
   "$template": {
     "$comment": "The field below will be 1",
-    "test": "{{"{{mod(5, 2)}}"}}"
+    "test": "{{"{{mod(5, 2)"}}}}"
   }
 }
 ```

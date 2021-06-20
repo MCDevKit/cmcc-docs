@@ -20,7 +20,7 @@ Returns the nearest number with specified precision.
 {
   "$template": {
     "$comment": "The field below will be 3.142",
-    "test": "{{"{{round(3.1415, 3)}}"}}"
+    "test": "{{"{{round(3.1415, 3)"}}}}"
   }
 }
 ```

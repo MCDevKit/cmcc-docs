@@ -20,7 +20,7 @@ Returns normal (direction) vector based on pitch and yaw rotation.
 {
   "$template": {
     "$comment": "The field below will be [0,0,1]",
-    "test": "{{"{{rotationToNormal(0, 0)}}"}}"
+    "test": "{{"{{rotationToNormal(0, 0)"}}}}"
   }
 }
 ```

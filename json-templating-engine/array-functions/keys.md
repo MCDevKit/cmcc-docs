@@ -28,7 +28,7 @@ for query
 ```json
 {
   "$template": {
-    "test": "{{"{{keys(testObject)}}"}}"
+    "test": "{{"{{keys(testObject)"}}}}"
   }
 }
 ```

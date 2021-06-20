@@ -19,7 +19,7 @@ Returns an integer number rounded up.
 {
   "$template": {
     "$comment": "The field below will be 4",
-    "test": "{{"{{ceil(3.3)}}"}}"
+    "test": "{{"{{ceil(3.3)"}}}}"
   }
 }
 ```

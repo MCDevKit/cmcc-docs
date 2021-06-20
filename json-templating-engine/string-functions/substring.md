@@ -21,7 +21,7 @@ Returns a string that is a substring of this string. The substring begins at the
 {
   "$template": {
     "$comment": "The field below will be 45",
-    "test": "{{"{{substring('123456789', 3, 5))}}"}}"
+    "test": "{{"{{substring('123456789', 3, 5))"}}}}"
   }
 }
 ```

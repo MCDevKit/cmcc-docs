@@ -19,7 +19,7 @@ Returns an array of file paths recursively, which means, that if the folder cont
 ```json
 {
   "$template": {
-    "{{"{{#fileListRecurse('resources/textures', '*.png')}}"}}": {
+    "{{"{{#fileListRecurse('resources/textures', '*.png')"}}}}": {
       "{{index}}": "{{value}}"
     }
   }

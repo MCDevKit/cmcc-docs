@@ -21,7 +21,7 @@ Returns string from the first argument with occurrences of the second argument r
 {
   "$template": {
     "$comment": "The field below will be 'this_is_a_test'",
-    "test": "{{"{{replace('this is a test', ' ', '_')}}"}}"
+    "test": "{{"{{replace('this is a test', ' ', '_')"}}}}"
   }
 }
 ```

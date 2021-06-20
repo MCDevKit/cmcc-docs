@@ -19,7 +19,7 @@ Returns a name and extension from file path in first argument.
 {
   "$template": {
     "$comment": "The field below will be 'particles.png'",
-    "test": "{{"{{fileName('resources/textures/particle/particles.png')}}"}}"
+    "test": "{{"{{fileName('resources/textures/particle/particles.png')"}}}}"
   }
 }
 ```

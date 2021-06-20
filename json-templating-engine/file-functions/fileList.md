@@ -19,7 +19,7 @@ Returns an array of file names.
 ```json
 {
   "$template": {
-    "{{"{{#fileList('resources/textures/particle', '*.png')}}"}}": {
+    "{{"{{#fileList('resources/textures/particle', '*.png')"}}}}": {
       "{{index}}": "{{value}}"
     }
   }
