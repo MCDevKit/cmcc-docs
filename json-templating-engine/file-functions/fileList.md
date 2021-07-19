@@ -20,7 +20,7 @@ Returns an array of file names.
 {
   "$template": {
     "{{"{{#fileList('resources/textures/particle', '*.png')"}}}}": {
-      "{{index}}": "{{value}}"
+      "{{"{{index"}}}}": "{{"{{value"}}}}"
     }
   }
 }
