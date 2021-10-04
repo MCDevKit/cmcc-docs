@@ -23,7 +23,7 @@ CommandLang is a programming language compiled to Minecraft Bedrock Edition comm
 
 ## Activation
 
-* Go to [Client Panel](https://mcdevkikt.com/panel)
+* Go to [Client Panel](https://mcdevkit.com/panel)
 * Make sure you have active subscription
 * Copy License Key
 * Open terminal of choice and type `cmcc activate <license key>`, where `<license key>` should be replaced with what you copied in previous step
