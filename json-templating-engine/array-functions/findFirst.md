@@ -12,7 +12,7 @@ Returns the first element from an array filtered by the predicate.
 ## Arguments
 
  - array: Source array
- - predicate: Lambda, that should return whether an element should remain
+ - predicate(element, index): Lambda, that should return whether an element should remain
 
 ## Example
 

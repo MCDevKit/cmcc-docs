@@ -12,7 +12,7 @@ Returns a new array that is filtered based on a predicate.
 ## Arguments
 
  - array: Source array
- - predicate: Lambda, that should return whether an element should remain
+ - predicate(element, index): Lambda, that should return whether an element should remain
 
 ## Example
 

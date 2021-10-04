@@ -2,12 +2,12 @@
 layout: page
 parent: Annotations
 grand_parent: CommandLang
-title: OnQuery
+title: OnQueryChange
 ---
 
-# OnQuery
+# OnQueryChange
 
-This annotation executes a function every time the value from Molang query becomes true. 
+This annotation executes a function every time the value from Molang query changes. 
 
 ***This annotation requires an entity behavior pack definition present in project in order to inject the animation controller.***
 
@@ -15,13 +15,12 @@ This annotation executes a function every time the value from Molang query becom
 
 * `query` - Molang query.
 * `id` - entity identifier.
-* `single` - whether this function should run only once per entity.
 
 ## Example
 
 ```
-@OnQuery(query="query.is_alive",id="minecraft:player")
-func aliveTrigger() {
-    >>say I'm alive!
+@OnQueryChange(query="query.health",id="minecraft:player")
+func healthChanged() {
+    >>say My health changed!
 }
 ```

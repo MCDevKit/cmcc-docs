@@ -12,7 +12,7 @@ Returns a new array, where every element is mapped to another value using provid
 ## Arguments
 
  - array: Source array
- - lambda: Lambda, that should return new element value
+ - lambda(element, index): Lambda, that should return new element value
 
 ## Example
 

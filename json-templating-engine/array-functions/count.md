@@ -12,7 +12,7 @@ Returns the number of elements in an array.
 ## Arguments
 
  - array: Source array
- - predicate: (optional) Lambda, that should return whether an element should be counted
+ - predicate(element, index): (optional) Lambda, that should return whether an element should be counted
 
 ## Example
 

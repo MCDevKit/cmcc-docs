@@ -12,7 +12,7 @@ Returns a new array, where every array from lambda is merged into source array.
 ## Arguments
 
  - array: Source array
- - lambda: Lambda, that should return an array to merge. If none provided, it will use identity lambda (`x => x`)
+ - lambda(element, index): Lambda, that should return an array to merge. If none provided, it will use identity lambda (`x => x`)
 
 ## Example
 
