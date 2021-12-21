@@ -34,7 +34,7 @@ The next step is to edit `config.json` file to add JSON Templating Engine and Co
 
 **This step assumes, that you already properly installed CommandLang and added it to the path.**
 
-```json lines
+```json5
 {
   "name": "name",
   "author": "author",
