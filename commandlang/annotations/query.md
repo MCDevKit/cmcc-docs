@@ -15,10 +15,11 @@ This annotation binds a boolean value from Molang query to a field.
 
 * `query` - Molang query.
 * `id` - entity identifier.
+* `range` - (optional) an array of integers, that the value can have. This is a JSON Templating Engine language expression.
 
 ## Example
 
 ```
-@Query(query="query.is_alive",id="minecraft:player")
-define fieldName;
+@Query(query="query.health",id="minecraft:player", range="0..20")
+define playerHealth;
 ```
