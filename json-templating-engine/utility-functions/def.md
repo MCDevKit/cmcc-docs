@@ -2,10 +2,10 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: Utility functions
-title: def
+title: def (deprecated)
 ---
 
-# def
+# def (deprecated)
 
 Returns the specified field value or default if doesn't exist or null.
 

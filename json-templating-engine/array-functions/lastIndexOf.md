@@ -2,12 +2,12 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: Array functions
-title: indexOf
+title: lastIndexOf
 ---
 
-# indexOf
+# lastIndexOf
 
-Returns index of the first occurrence of given element inside the array or -1 if not found.
+Returns index of the last occurrence of given element inside the array or -1 if not found.
 
 ## Arguments
 
@@ -20,7 +20,7 @@ Returns index of the first occurrence of given element inside the array or -1 if
 {
   "$template": {
     "$comment": "The field below will be 1",
-    "test": "{{"{{indexOf(1..5, 2)"}}}}"
+    "test": "{{"{{lastIndexOf(1..5, 2)"}}}}"
   }
 }
 ```
