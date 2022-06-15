@@ -9,6 +9,8 @@ has_children: true
 JSON Templating Engine is a simple templating engine, that speeds up generating large amounts of JSON files.
 It follows usual JSON syntax and name should have an extension `.templ`.
 
+For interactive tutorial, [click here](https://mcdevkit.com/tutorial)
+
 Simple real life example:
 ```json
 {
