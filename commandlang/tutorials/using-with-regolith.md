@@ -11,6 +11,10 @@ Regolith is an Add-on Compiler for the Bedrock Edition of Minecraft.
 
 Steps to install are on the [Regolith website](https://bedrock-oss.github.io/regolith/)
 
+## Prerequisites
+
+Before proceeding, make sure you have CommandLang properly installed and activated. For JSON Templating Engine also the Java 11 or later is required. Instructions are provided [here](https://bedrock-oss.github.io/regolith/docs/java-filters#installing-java)
+
 ## Project setup
 
 Since Regolith takes the role of the compiler, we will initialize it using `regolith` command.
@@ -19,80 +23,41 @@ Since Regolith takes the role of the compiler, we will initialize it using `rego
 regolith init
 ```
 
-After that we need to set up the project structure.
+After that we need to add JSON Templating Engine and CommandLang as filters.
 
 ```shell
-# Create folder for JSON Templating Engine data
-mkdir packs/data/json_templating_engine
-# Create folder for CommandLang source code
-mkdir packs/data/command_lang
+regolith install github.com/MCDevKit/regolith-library/json_templating_engine
+regolith install github.com/MCDevKit/regolith-library/command_lang
 ```
 
 ## Configuration
 
-The next step is to edit `config.json` file to add JSON Templating Engine and CommandLang as filters to the Regolith.
-
-**This step assumes, that you already properly installed CommandLang and added it to the path.**
+The next step is to edit `config.json` file to add JSON Templating Engine and CommandLang as filters to the chosen profile. Only relevant fields are shown.
 
 ```json
 {
-  "name": "name",
-  "author": "author",
-  "packs": {
-    "behaviorPack": "./packs/BP",
-    "resourcePack": "./packs/RP"
-  },
   "regolith": {
     "profiles": {
-      "dev": {
+      "default": {
         "filters": [
-          // We need to add JSON Templating Engine separately, because CommandLang as filter will only take care of .mcc files
           {
-            "url": "github.com/MCDevKit/regolith-library/json_templating_engine"
+            "filter": "json_templating_engine"
           },
           {
-            "runWith": "shell",
-            "command": "cmcc",
-            "arguments": [
-              "regolith",
-              "--bp-dir",
-              "./BP",
-              "--data-dir",
-              "./data/json_templating_engine",
-              "--source-dir",
-              "./data/command_lang",
-              "--no-ansi"
-            ]
+            "filter": "command_lang"
           }
-        ],
-        "export": {
-          "target": "development"
-        },
-        "dataPath": "./packs/data"
+        ]
       }
     }
   }
 }
 ```
 
-## Adding required files
+## Unlocking community filters
 
-CommandLang itself requires only one file to be present, which is `packs/data/command_lang/main.mcc`.
-
-```
-public func start() {
-  // Your code here
-}
-
-public func update() {
-  // Your code here
-}
-```
-
-## Installing filters
+By default, Regolith blocks running community filters, which means that once per project, you need to unlock it by running this command.
 
 ```shell
-regolith install
 regolith unlock
 ```
 
