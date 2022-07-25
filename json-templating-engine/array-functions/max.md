@@ -20,7 +20,7 @@ Returns the element, for which the predicate will return the maximum value or nu
 {
   "$template": {
     "$comment": "The field below will be 4",
-    "test": "{{"{{max(0..4)"}}}}"
+    "test": "{{"{{(0..4).max()"}}}}"
   }
 }
 ```

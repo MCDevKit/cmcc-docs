@@ -20,7 +20,7 @@ Returns the number of elements in an array.
 {
   "$template": {
     "$comment": "The field below will be 3",
-    "test": "{{"{{count(0..4, x => mod(x, 2) == 0)"}}}}"
+    "test": "{{"{{(0..4).count(x => mod(x, 2) == 0)"}}}}"
   }
 }
 ```

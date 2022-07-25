@@ -9,6 +9,8 @@ title: fileListRecurse
 
 Returns an array of file paths recursively, which means, that if the folder contains another folder, its contents will also be added to the array.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Arguments
 
  - path: A path to the folder

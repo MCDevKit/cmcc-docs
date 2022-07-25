@@ -9,6 +9,8 @@ title: fileList
 
 Returns an array of file names.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Arguments
 
  - path: A path to the folder

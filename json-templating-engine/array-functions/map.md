@@ -20,7 +20,7 @@ Returns a new array, where every element is mapped to another value using provid
 {
   "$template": {
     "$comment": "The field below will be [0, 2, 4, 6, 8]",
-    "test": "{{"{{map(0..4, x => x => x * 2)"}}}}"
+    "test": "{{"{{(0..4).map(x => x => x * 2)"}}}}"
   }
 }
 ```

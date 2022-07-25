@@ -20,7 +20,7 @@ Returns a new array that is filtered based on a predicate.
 {
   "$template": {
     "$comment": "The field below will be [0, 2, 4]",
-    "test": "{{"{{filter(0..4, x => mod(x, 2) == 0)"}}}}"
+    "test": "{{"{{(0..4).filter(x => mod(x, 2) == 0)"}}}}"
   }
 }
 ```

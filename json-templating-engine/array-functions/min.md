@@ -20,7 +20,7 @@ Returns the element, for which the predicate will return the minimum value or nu
 {
   "$template": {
     "$comment": "The field below will be 0",
-    "test": "{{"{{min(0..4)"}}}}"
+    "test": "{{"{{(0..4).min()"}}}}"
   }
 }
 ```

@@ -20,7 +20,7 @@ Returns index of the first occurrence of given element inside the array or -1 if
 {
   "$template": {
     "$comment": "The field below will be 1",
-    "test": "{{"{{indexOf(1..5, 2)"}}}}"
+    "test": "{{"{{(1..5).indexOf(2)"}}}}"
   }
 }
 ```

@@ -9,6 +9,8 @@ title: getLatestBPFile
 
 Returns a path to the latest vanilla behavior pack file.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Example
 
 ```json

@@ -9,6 +9,8 @@ title: getLatestRPFile
 
 Returns a path to the latest vanilla resource pack file.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Example
 
 ```json

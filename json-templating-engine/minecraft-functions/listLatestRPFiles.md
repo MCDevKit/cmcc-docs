@@ -9,6 +9,8 @@ title: listLatestRPFiles
 
 Returns an array of paths to the latest vanilla resource pack files in a given directory.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Example
 
 ```json

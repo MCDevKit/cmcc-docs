@@ -2,16 +2,16 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: String functions
-title: chars
+title: length
 ---
 
-# chars
+# length
 
-Returns an array of strings, where each string is another character.
+Returns the length of this string.
 
 ## Arguments
 
- - string: Text to convert
+ - string: String
 
 ## Example
 

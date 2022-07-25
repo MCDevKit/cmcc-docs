@@ -9,6 +9,8 @@ title: isDir
 
 Returns whether a file is a directory.
 
+**This method is marked as unsafe. It can be disabled by certain environments.**
+
 ## Arguments
 
  - path: A path to the file

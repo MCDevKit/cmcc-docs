@@ -22,7 +22,7 @@ Returns a portion of the array between the specified startIndex, inclusive, and 
 {
   "$template": {
     "$comment": "The field below will be [4, 5, 6, 7]",
-    "test": "{{"{{0..10.sublist(4, 8)"}}}}"
+    "test": "{{"{{(0..10).sublist(4, 8)"}}}}"
   }
 }
 ```
