@@ -14,9 +14,11 @@ Converts a string to lowercase.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'this is a test'",
     "test": "{{"{{toLowerCase('THIS IS A TEST')"}}}}"
   }
 }
+```

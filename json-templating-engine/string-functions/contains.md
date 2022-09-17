@@ -15,9 +15,11 @@ Checks if a string contains a substring.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be true",
     "test": "{{"{{contains('this is a test', 'test')"}}}}"
   }
 }
+```

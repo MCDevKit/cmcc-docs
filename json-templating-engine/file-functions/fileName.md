@@ -14,9 +14,11 @@ Gets the name of a file.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be the name of the file data.json",
     "test": "{{"{{fileName('dir/data.json')"}}}}"
   }
 }
+```

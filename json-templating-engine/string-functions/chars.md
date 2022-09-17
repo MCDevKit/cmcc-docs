@@ -14,9 +14,11 @@ Returns the characters of a string as an array.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be ['t', 'h', 'i', 's']",
     "test": "{{"{{chars('this')"}}}}"
   }
 }
+```

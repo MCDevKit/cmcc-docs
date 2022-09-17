@@ -14,8 +14,10 @@ Gets the width of an image.
 
 ## Example
 
+```json
 {
   "$template": {
     "test": "{{"{{imageWidth('resources/textures/particle/particles.png')"}}}}"
   }
 }
+```

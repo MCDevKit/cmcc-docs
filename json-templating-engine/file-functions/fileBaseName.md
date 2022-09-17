@@ -14,9 +14,11 @@ Gets the base name of a file.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'data'",
     "test": "{{"{{fileBaseName('data.json')"}}}}"
   }
 }
+```

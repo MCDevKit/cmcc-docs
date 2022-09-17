@@ -15,9 +15,11 @@ Returns the index of the last occurrence of a substring within a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 8",
     "test": "{{"{{lastIndexOf('this is a test', 'test')"}}}}"
   }
 }
+```

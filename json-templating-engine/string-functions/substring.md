@@ -16,9 +16,11 @@ Returns a substring of a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'this'",
     "test": "{{"{{substring('this is a test', 0, 4)"}}}}"
   }
 }
+```

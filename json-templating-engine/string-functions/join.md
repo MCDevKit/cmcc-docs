@@ -15,9 +15,11 @@ Joins an array of strings together into a single string, separated by a separato
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'this,is,a,test'",
     "test": "{{"{{join(['this', 'is', 'a', 'test'], ',')"}}}}"
   }
 }
+```

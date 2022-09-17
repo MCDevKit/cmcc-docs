@@ -14,8 +14,10 @@ Returns the duration of an audio file in seconds.
 
 ## Example
 
+```json
 {
   "$template": {
     "test": "{{"{{audioDuration('resources/sounds/sound.wav')"}}}}"
   }
 }
+```

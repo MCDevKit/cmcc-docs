@@ -15,9 +15,11 @@ Returns true if a string starts with a substring.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be true",
     "test": "{{"{{startsWith('this is a test', 'this')"}}}}"
   }
 }
+```

@@ -16,9 +16,11 @@ Replaces all occurrences of a substring within a string with another string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'this_is_a_test'",
     "test": "{{"{{replace('this is a test', ' ', '_')"}}}}"
   }
 }
+```

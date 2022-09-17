@@ -15,9 +15,11 @@ Returns true if a string ends with a substring.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be true",
     "test": "{{"{{endsWith('this is a test', 'test')"}}}}"
   }
 }
+```

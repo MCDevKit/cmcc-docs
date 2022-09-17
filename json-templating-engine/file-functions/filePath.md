@@ -14,9 +14,11 @@ Gets the path of a file.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'data'",
     "test": "{{"{{filePath('data.json')"}}}}"
   }
 }
+```

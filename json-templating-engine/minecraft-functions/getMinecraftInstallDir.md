@@ -11,9 +11,11 @@ Returns a path to the folder with Minecraft app. The value is cached after the f
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will most likely be 'C:\Program Files\WindowsApps\Microsoft.MinecraftUWP_<Minecraft version>__8wekyb3d8bbwe'",
     "test": "{{"{{getMinecraftInstallDir()"}}}}"
   }
 }
+```

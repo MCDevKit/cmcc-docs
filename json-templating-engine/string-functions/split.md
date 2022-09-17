@@ -15,9 +15,11 @@ Splits a string into an array of strings, using a separator.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be ['this', 'is', 'a', 'test']",
     "test": "{{"{{split('this is a test', ' ')"}}}}"
   }
 }
+```

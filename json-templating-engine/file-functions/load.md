@@ -14,9 +14,11 @@ Loads a JSON file from the given path.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be an object from the file data.json",
     "test": "{{"{{load('data.json')"}}}}"
   }
 }
+```

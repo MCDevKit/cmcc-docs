@@ -14,9 +14,11 @@ Gets the extension of a file.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be '.json'",
     "test": "{{"{{fileExtension('data.json')"}}}}"
   }
 }
+```

@@ -15,9 +15,11 @@ Lists all files in a directory, recursively.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be an array of all files with .json extension in the data directory and its subdirectories",
     "test": "{{"{{fileListRecurse('data', "*.json")"}}}}"
   }
 }
+```

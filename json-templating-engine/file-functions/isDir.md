@@ -14,9 +14,11 @@ Checks if the given path is a directory.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be true if the path is a directory",
     "test": "{{"{{isDir('data')"}}}}"
   }
 }
+```

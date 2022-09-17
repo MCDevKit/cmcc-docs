@@ -14,9 +14,11 @@ Returns the length of a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 4",
     "test": "{{"{{length('this')"}}}}"
   }
 }
+```

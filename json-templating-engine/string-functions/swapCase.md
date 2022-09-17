@@ -14,9 +14,11 @@ Swaps the case of each letter in a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'tHIS IS A TEST'",
     "test": "{{"{{swapCase('This is a test')"}}}}"
   }
 }
+```

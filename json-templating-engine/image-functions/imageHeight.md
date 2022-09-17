@@ -14,8 +14,10 @@ Gets the height of an image.
 
 ## Example
 
+```json
 {
   "$template": {
     "test": "{{"{{imageHeight('resources/textures/particle/particles.png')"}}}}"
   }
 }
+```

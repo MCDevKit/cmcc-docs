@@ -14,9 +14,11 @@ Capitalizes the first letter of each word in a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'This Is A Test'",
     "test": "{{"{{title('this is a test')"}}}}"
   }
 }
+```

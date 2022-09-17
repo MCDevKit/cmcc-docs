@@ -14,9 +14,11 @@ Converts a string to uppercase.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 'THIS IS A TEST'",
     "test": "{{"{{toUpperCase('this is a test')"}}}}"
   }
 }
+```

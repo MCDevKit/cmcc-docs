@@ -14,8 +14,10 @@ Returns an array of paths to the latest files in behavior pack within given path
 
 ## Example
 
+```json
 {
   "$template": {
     "test": "{{"{{listLatestBPFiles('entities')"}}}}"
   }
 }
+```

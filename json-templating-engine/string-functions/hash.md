@@ -14,9 +14,11 @@ Returns an integer hash of a string.
 
 ## Example
 
+```json
 {
   "$template": {
     "$comment": "The field below will be 2139996864",
     "test": "{{"{{hash('this is a test')"}}}}"
   }
 }
+```
