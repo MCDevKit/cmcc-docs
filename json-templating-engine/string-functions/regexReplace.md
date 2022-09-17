@@ -19,6 +19,6 @@ Replaces the first occurrence of a substring that matches a regular expression.
 {
   "$template": {
     "$comment": "The field below will be 'this-is-a-test'",
-    "test": "{{"{{regexReplace('this is a test', '\s', '-')}"
+    "test": "{{"{{regexReplace('this is a test', '\s', '-')"}}}}"
   }
 }
