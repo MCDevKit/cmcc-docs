@@ -7,22 +7,20 @@ title: sublist
 
 # sublist
 
-Returns a portion of the array between the specified startIndex, inclusive, and endIndex, exclusive. (If startIndex and endIndex are equal, the returned array is empty.)
-
-
+Returns a sublist of the given array
 ## Arguments
 
- - array: Source array
- - startIndex: Starting index (inclusive) of the sub list
- - endIndex: Ending index (exclusive) of the sub list. If none provided, will use the end of the array
+- `array` - The array to slice
+- `start` - The start index
+- `end` - (optional) The end index
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be [4, 5, 6, 7]",
-    "test": "{{"{{(0..10).sublist(4, 8)"}}}}"
+	"$comment": "The field below will be [1, 2, 3]",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].sublist(0, 3)"}}}}"
   }
 }
 ```

@@ -7,17 +7,16 @@ title: getLatestRPFile
 
 # getLatestRPFile
 
-Returns a path to the latest vanilla resource pack file.
+Returns a path to the latest resource pack file.
+## Arguments
 
-**This method is marked as unsafe. It can be disabled by certain environments.**
+- `path` - The path to the file inside resource pack.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will most likely be 'C:\Program Files\WindowsApps\Microsoft.MinecraftUWP_<Minecraft version>__8wekyb3d8bbwe\data\resource_packs\vanilla_1.17.0\entity\axolotl.entity.json'",
-    "test": "{{"{{getLatestRPFile('entity/axolotl.entity.json')"}}}}"
+    "$comment": "The field below will most likely be 'C:\Program Files\WindowsApps\Microsoft.MinecraftUWP_<Minecraft version>__8wekyb3d8bbwe\data\resource_packs\vanilla_1.18.10\textures\entity\axolotl\axolotl_wild.png'",
+    "test": "{{"{{getLatestRPFile('textures/entity/axolotl/axolotl_wild.png')"}}}}"
   }
 }
-```

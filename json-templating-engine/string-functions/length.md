@@ -7,19 +7,16 @@ title: length
 
 # length
 
-Returns the length of this string.
-
+Returns the length of a string.
 ## Arguments
 
- - string: String
+- `string` - The string to get the length of.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be ['h', 'e', 'l', 'l', 'o']",
-    "test": "{{"{{chars('hello')"}}}}"
+    "$comment": "The field below will be 4",
+    "test": "{{"{{length('this')"}}}}"
   }
 }
-```

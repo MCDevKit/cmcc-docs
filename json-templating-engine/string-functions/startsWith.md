@@ -7,20 +7,17 @@ title: startsWith
 
 # startsWith
 
-Tests if this string starts with the specified prefix.
-
+Returns true if a string starts with a substring.
 ## Arguments
 
- - string: Text to check
- - string: Prefix
+- `string` - The string to search.
+- `substring` - The substring to search for.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{startsWith('testing', 'test'))"}}}}"
+    "test": "{{"{{startsWith('this is a test', 'this')"}}}}"
   }
 }
-```

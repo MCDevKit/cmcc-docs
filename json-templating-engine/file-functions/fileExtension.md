@@ -7,19 +7,16 @@ title: fileExtension
 
 # fileExtension
 
-Returns an extension from file path in first argument.
-
+Gets the extension of a file.
 ## Arguments
 
- - path: A path to the file
+- `path` - The path to the file.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be 'png'",
-    "test": "{{"{{fileExtension('resources/textures/particle/particles.png')"}}}}"
+    "$comment": "The field below will be '.json'",
+    "test": "{{"{{fileExtension('data.json')"}}}}"
   }
 }
-```

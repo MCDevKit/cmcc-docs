@@ -7,19 +7,16 @@ title: capitalize
 
 # capitalize
 
-Returns a string, where all letters are lowercase, and the first letter is uppercase.
-
+Capitalizes the first letter of a string.
 ## Arguments
 
- - string: Text to transform
+- `string` - The string to capitalize.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be Test",
-    "test": "{{"{{capitalize('test'))"}}}}"
+    "$comment": "The field below will be 'This is a test'",
+    "test": "{{"{{capitalize('this is a test')"}}}}"
   }
 }
-```

@@ -7,20 +7,19 @@ title: bitwiseXor
 
 # bitwiseXor
 
-Performs bitwise XOR (exclusive OR) operation on two numbers.
-
+Returns the bitwise XOR of the given numbers.
 ## Arguments
 
- - a: First number
- - b: Second number
+- `number1` - The first number to bitwise XOR.
+- `number2` - The second number to bitwise XOR.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 6",
-    "test": "{{"{{bitwiseXor(5, 3)"}}}}"
+    "$comment": "The field below will be 1",
+    "test": "{{"{{bitwiseXor(3, 2)"}}}}"
   }
 }
 ```

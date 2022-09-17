@@ -7,19 +7,18 @@ title: bitwiseNot
 
 # bitwiseNot
 
-Performs bitwise NOT operation on a number.
-
+Returns the bitwise NOT of the given number.
 ## Arguments
 
- - a: A number
+- `number` - The number to bitwise NOT.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be -6",
-    "test": "{{"{{bitwiseNot(5)"}}}}"
+    "$comment": "The field below will be -4",
+    "test": "{{"{{bitwiseNot(3)"}}}}"
   }
 }
 ```

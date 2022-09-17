@@ -7,19 +7,18 @@ title: reverse
 
 # reverse
 
-Returns an array with reversed order.
-
+Reverses the given array
 ## Arguments
 
- - array: Source array
+- `array` - The array to reverse
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be [4, 3, 2, 1, 0]",
-    "test": "{{"{{(0..4).reverse()"}}}}"
+	"$comment": "The field below will be [10, 8, 5, 3, 2, 1]",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].reverse()"}}}}"
   }
 }
 ```

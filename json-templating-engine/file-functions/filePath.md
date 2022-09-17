@@ -7,19 +7,16 @@ title: filePath
 
 # filePath
 
-Returns a directory path from file path in first argument.
-
+Gets the path of a file.
 ## Arguments
 
- - path: A path to the file
+- `path` - The path to the file.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be 'resources/textures/particle/'",
-    "test": "{{"{{filePath('resources/textures/particle/particles.png')"}}}}"
+    "$comment": "The field below will be 'data'",
+    "test": "{{"{{filePath('data.json')"}}}}"
   }
 }
-```

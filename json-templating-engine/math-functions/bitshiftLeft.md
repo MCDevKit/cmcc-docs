@@ -7,20 +7,19 @@ title: bitshiftLeft
 
 # bitshiftLeft
 
-Performs signed left shift operation on a number by number of positions.
-
+Returns the bitwise left shift of the given numbers.
 ## Arguments
 
- - a: A number to shift
- - b: Number of positions to shift
+- `number` - The number to bitwise left shift.
+- `shift` - The number of bits to shift.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 4",
-    "test": "{{"{{bitshiftLeft(1, 2)"}}}}"
+    "$comment": "The field below will be 12",
+    "test": "{{"{{bitshiftLeft(3, 2)"}}}}"
   }
 }
 ```

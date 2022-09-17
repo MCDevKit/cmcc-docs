@@ -2,16 +2,15 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: Math functions
-title: min
+title: sqrt
 ---
 
-# min
+# sqrt
 
-Returns the smallest of the given numbers.
+Returns the square root of the given number.
 ## Arguments
 
-- `number1` - The first number to compare.
-- `number2` - The second number to compare.
+- `number` - The number to get the square root of.
 
 ## Example
 
@@ -19,7 +18,7 @@ Returns the smallest of the given numbers.
 {
   "$template": {
     "$comment": "The field below will be 3",
-    "test": "{{"{{min(3, 5)"}}}}"
+    "test": "{{"{{sqrt(9)"}}}}"
   }
 }
 ```

@@ -7,20 +7,17 @@ title: split
 
 # split
 
-Returns an array from string.
-
+Splits a string into an array of strings, using a separator.
 ## Arguments
 
- - string: Text to split
- - delimiter: Text to split by
+- `string` - The string to split.
+- `separator` - The separator to use.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be ['this', 'is', 'a', 'test']",
-    "test": "{{"{{split('this_is_a_test', '_')"}}}}"
+    "test": "{{"{{split('this is a test', ' ')"}}}}"
   }
 }
-```

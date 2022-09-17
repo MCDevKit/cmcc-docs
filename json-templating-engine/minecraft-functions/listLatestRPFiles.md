@@ -7,17 +7,15 @@ title: listLatestRPFiles
 
 # listLatestRPFiles
 
-Returns an array of paths to the latest vanilla resource pack files in a given directory.
+Returns an array of paths to the latest files in resource pack within given path.
+## Arguments
 
-**This method is marked as unsafe. It can be disabled by certain environments.**
+- `path` - The path to the directory inside resource pack.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be an array of absolute paths to latest camera files across all vanilla packs",
-    "test": "{{"{{listLatestRPFiles('cameras')"}}}}"
+    "test": "{{"{{listLatestRPFiles('entity')"}}}}"
   }
 }
-```

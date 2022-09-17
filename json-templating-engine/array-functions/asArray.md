@@ -7,13 +7,12 @@ title: asArray
 
 # asArray
 
-Returns an array of objects from an object, where each object in resulting array has fields with field name and value.
-
+Converts an object to an array of objects with the given key and value
 ## Arguments
 
- - object: Object to be mapped
- - keyName: Name of the key field
- - valueName: Name of the value field
+- `object` - The object to convert
+- `key` - The key to use for the new objects
+- `value` - The value to use for the new objects
 
 ## Example
 

@@ -7,12 +7,11 @@ title: round
 
 # round
 
-Returns the nearest number with specified precision.
-
+Returns the nearest integer to the given number.
 ## Arguments
 
- - number: A number to round
- - precision: A number of decimal places. If none specified, it will round to the nearest integer.
+- `number` - The number to round.
+- `precision` - (optional) The number of decimal places to round to.
 
 ## Example
 

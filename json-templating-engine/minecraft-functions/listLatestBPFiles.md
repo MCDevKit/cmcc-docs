@@ -7,17 +7,15 @@ title: listLatestBPFiles
 
 # listLatestBPFiles
 
-Returns an array of paths to the latest vanilla behavior pack files in a given directory.
+Returns an array of paths to the latest files in behavior pack within given path.
+## Arguments
 
-**This method is marked as unsafe. It can be disabled by certain environments.**
+- `path` - The path to the directory inside behavior pack.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be an array of absolute paths to latest spawn rules files across all vanilla packs",
-    "test": "{{"{{listLatestBPFiles('spawn_rules')"}}}}"
+    "test": "{{"{{listLatestBPFiles('entities')"}}}}"
   }
 }
-```

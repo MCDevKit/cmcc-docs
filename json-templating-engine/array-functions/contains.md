@@ -7,20 +7,19 @@ title: contains
 
 # contains
 
-Returns whether supplied array contains provided value.
-
+Checks if the given array contains the given value
 ## Arguments
 
- - array: Array to check
- - value: Value to search for (currently a string, or a number only)
+- `array` - The array to check
+- `value` - The value to check for
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be true",
-    "test": "{{"{{['asd', '123', 123, 9].contains('123')"}}}}"
+	"$comment": "The field below will be true",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].contains(5)"}}}}"
   }
 }
 ```

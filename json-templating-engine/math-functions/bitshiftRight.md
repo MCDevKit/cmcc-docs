@@ -7,12 +7,11 @@ title: bitshiftRight
 
 # bitshiftRight
 
-Performs signed right shift operation on a number by number of positions.
-
+Returns the bitwise right shift of the given numbers.
 ## Arguments
 
- - a: A number to shift
- - b: Number of positions to shift
+- `number` - The number to bitwise right shift.
+- `shift` - The number of bits to shift.
 
 ## Example
 
@@ -20,7 +19,7 @@ Performs signed right shift operation on a number by number of positions.
 {
   "$template": {
     "$comment": "The field below will be 1",
-    "test": "{{"{{bitshiftRight(4, 2)"}}}}"
+    "test": "{{"{{bitshiftRight(3, 1)"}}}}"
   }
 }
 ```

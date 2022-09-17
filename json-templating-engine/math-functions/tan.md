@@ -7,8 +7,18 @@ title: tan
 
 # tan
 
-Returns the trigonometric tangent of an angle in degrees.
-
+Returns the tangent of the given number.
 ## Arguments
 
- - number: An angle in degrees
+- `number` - The number to get the tangent of.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 1",
+    "test": "{{"{{tan(45)"}}}}"
+  }
+}
+```

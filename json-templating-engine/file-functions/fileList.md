@@ -7,23 +7,17 @@ title: fileList
 
 # fileList
 
-Returns an array of file names.
-
-**This method is marked as unsafe. It can be disabled by certain environments.**
-
+Lists all files in a directory.
 ## Arguments
 
- - path: A path to the folder
- - filter: (optional) A wildcard filter for filtering the file list
+- `path` - The path to the directory to list.
+- `filter` - (optional) A glob filter to match files against.
 
 ## Example
 
-```json
 {
   "$template": {
-    "{{"{{#fileList('resources/textures/particle', '*.png')"}}}}": {
-      "{{"{{index"}}}}": "{{"{{value"}}}}"
-    }
+    "$comment": "The field below will be an array of all files with .json extension in the data directory",
+    "test": "{{"{{fileList('data', "*.json")"}}}}"
   }
 }
-```

@@ -7,20 +7,19 @@ title: filter
 
 # filter
 
-Returns a new array that is filtered based on a predicate.
-
+Filters the elements in the given array based on the given predicate
 ## Arguments
 
- - array: Source array
- - predicate(element, index): Lambda, that should return whether an element should remain
+- `array` - The array to filter
+- `predicate(element, index)` - The predicate to filter by
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be [0, 2, 4]",
-    "test": "{{"{{(0..4).filter(x => mod(x, 2) == 0)"}}}}"
+	"$comment": "The field below will be [5, 8, 10]",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].filter(x => x >= 5)"}}}}"
   }
 }
 ```

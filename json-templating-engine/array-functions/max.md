@@ -7,20 +7,19 @@ title: max
 
 # max
 
-Returns the element, for which the predicate will return the maximum value or null if the array is empty.
-
+Finds the maximum value in the given array
 ## Arguments
 
- - array: Source array
- - predicate(element, index): Lambda, that should return a number to compare. If none provided, it will use identity lambda (`x => x`)
+- `array` - The array to find the maximum value in
+- `selector(element, index)` - (optional) The selector to apply to each element before finding the maximum value
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 4",
-    "test": "{{"{{(0..4).max()"}}}}"
+	"$comment": "The field below will be 10",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].max()"}}}}"
   }
 }
 ```

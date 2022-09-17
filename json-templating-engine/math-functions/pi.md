@@ -7,4 +7,15 @@ title: pi
 
 # pi
 
-Returns the closest number to pi.
+Returns the value of pi.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 3.141592653589793",
+    "test": "{{"{{pi()"}}}}"
+  }
+}
+```

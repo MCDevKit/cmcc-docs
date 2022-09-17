@@ -7,9 +7,19 @@ title: max
 
 # max
 
-Returns the larger of two numbers.
-
+Returns the largest of the given numbers.
 ## Arguments
 
- - a: Number a
- - b: Number b
+- `number1` - The first number to compare.
+- `number2` - The second number to compare.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 5",
+    "test": "{{"{{max(3, 5)"}}}}"
+  }
+}
+```

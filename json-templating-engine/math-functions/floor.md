@@ -7,11 +7,10 @@ title: floor
 
 # floor
 
-Returns an integer number rounded down.
-
+Returns the largest integer less than or equal to the given number.
 ## Arguments
 
- - number: A number to floor
+- `number` - The number to floor.
 
 ## Example
 

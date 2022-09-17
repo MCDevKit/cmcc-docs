@@ -7,20 +7,19 @@ title: pow
 
 # pow
 
-Returns the value of the first argument raised to the power of the second argument.
-
+Returns the given number raised to the given power.
 ## Arguments
 
- - a: Base
- - b: Exponent
+- `number` - The number to raise to the given power.
+- `power` - The power to raise the given number to.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 16",
-    "test": "{{"{{pow(4, 2)"}}}}"
+    "$comment": "The field below will be 27",
+    "test": "{{"{{pow(3, 3)"}}}}"
   }
 }
 ```

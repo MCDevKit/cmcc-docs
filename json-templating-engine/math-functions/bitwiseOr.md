@@ -7,20 +7,19 @@ title: bitwiseOr
 
 # bitwiseOr
 
-Performs bitwise OR operation on two numbers.
-
+Returns the bitwise OR of the given numbers.
 ## Arguments
 
- - a: First number
- - b: Second number
+- `number1` - The first number to bitwise OR.
+- `number2` - The second number to bitwise OR.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 7",
-    "test": "{{"{{bitwiseOr(5, 3)"}}}}"
+    "$comment": "The field below will be 3",
+    "test": "{{"{{bitwiseOr(3, 2)"}}}}"
   }
 }
 ```

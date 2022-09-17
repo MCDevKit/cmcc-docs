@@ -7,11 +7,10 @@ title: keys
 
 # keys
 
-Returns an array of keys from the object.
-
+Returns an array of the keys of the given object
 ## Arguments
 
- - object: Source object
+- `object` - The object to get the keys from
 
 ## Example
 

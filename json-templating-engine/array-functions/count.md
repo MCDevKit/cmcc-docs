@@ -7,20 +7,19 @@ title: count
 
 # count
 
-Returns the number of elements in an array.
-
+Counts the number of elements in the given array that match the given predicate
 ## Arguments
 
- - array: Source array
- - predicate(element, index): (optional) Lambda, that should return whether an element should be counted
+- `array` - The array to check
+- `predicate(element, index)` - (optional) The predicate to filter by
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 3",
-    "test": "{{"{{(0..4).count(x => mod(x, 2) == 0)"}}}}"
+	"$comment": "The field below will be 3",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].count(x => x >= 5)"}}}}"
   }
 }
 ```

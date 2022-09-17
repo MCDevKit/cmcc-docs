@@ -7,8 +7,18 @@ title: cos
 
 # cos
 
-Returns the trigonometric cosine of an angle in degrees.
-
+Returns the cosine of the given number.
 ## Arguments
 
- - number: An angle in degrees
+- `number` - The number to get the cosine of.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 0.7071067811865476",
+    "test": "{{"{{cos(45)"}}}}"
+  }
+}
+```

@@ -7,20 +7,19 @@ title: lastIndexOf
 
 # lastIndexOf
 
-Returns index of the last occurrence of given element inside the array or -1 if not found.
-
+Returns the last index of the given value in the given array
 ## Arguments
 
- - array: Source array
- - element: Element to find
+- `array` - The array to check
+- `value` - The value to check for
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 1",
-    "test": "{{"{{(1..5).lastIndexOf(2)"}}}}"
+	"$comment": "The field below will be 3",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].indexOf(5)"}}}}"
   }
 }
 ```

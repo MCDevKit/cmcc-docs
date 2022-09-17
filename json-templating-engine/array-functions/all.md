@@ -7,20 +7,19 @@ title: all
 
 # all
 
-Returns whether all elements of the supplied array match the provided predicate.
-
+Checks if all of the elements in the given array match the given predicate
 ## Arguments
 
- - array: Array to check
- - predicate: Predicate to apply to elements of this stream
+- `array` - The array to check
+- `predicate(element, index)` - The predicate to check against
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be true",
-    "test": "{{"{{['asd', '123'].all(x => x.length() == 3)"}}}}"
+	"$comment": "The field below will be false",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].all(x => x > 5)"}}}}"
   }
 }
 ```

@@ -7,11 +7,10 @@ title: values
 
 # values
 
-Returns an array of values from an object.
-
+Returns an array of the values of the given object
 ## Arguments
 
- - object: Source object
+- `object` - The object to get the values from
 
 ## Example
 

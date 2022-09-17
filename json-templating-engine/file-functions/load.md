@@ -7,19 +7,16 @@ title: load
 
 # load
 
-Returns json file as an object.
-
+Loads a JSON file from the given path.
 ## Arguments
 
- - path: A path to the file
+- `path` - The path to the file to load.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be an object from the file data.json",
     "test": "{{"{{load('data.json')"}}}}"
   }
 }
-```

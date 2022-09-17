@@ -7,19 +7,16 @@ title: toUpperCase
 
 # toUpperCase
 
-Returns a string, where all letters are uppercase.
-
+Converts a string to uppercase.
 ## Arguments
 
- - string: Text to transform
+- `string` - The string to convert.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be TEST",
-    "test": "{{"{{toUpperCase('Test'))"}}}}"
+    "$comment": "The field below will be 'THIS IS A TEST'",
+    "test": "{{"{{toUpperCase('this is a test')"}}}}"
   }
 }
-```

@@ -7,11 +7,10 @@ title: numberOfDigits
 
 # numberOfDigits
 
-Returns the number of digits of a number.
-
+Returns the number of digits in the given number.
 ## Arguments
 
- - a: A number
+- `number` - The number to count the number of digits.
 
 ## Example
 

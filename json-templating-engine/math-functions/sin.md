@@ -7,8 +7,18 @@ title: sin
 
 # sin
 
-Returns the trigonometric sine of an angle in degrees.
-
+Returns the sine of the given number.
 ## Arguments
 
- - number: An angle in degrees
+- `number` - The number to get the sine of.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 0.7071067811865475",
+    "test": "{{"{{sin(45)"}}}}"
+  }
+}
+```

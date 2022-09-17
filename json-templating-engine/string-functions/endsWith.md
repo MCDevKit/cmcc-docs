@@ -7,20 +7,17 @@ title: endsWith
 
 # endsWith
 
-Tests if this string ends with the specified suffix.
-
+Returns true if a string ends with a substring.
 ## Arguments
 
- - string: Text to check
- - string: Suffix
+- `string` - The string to search.
+- `substring` - The substring to search for.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{endsWith('testing', 'ing'))"}}}}"
+    "test": "{{"{{endsWith('this is a test', 'test')"}}}}"
   }
 }
-```

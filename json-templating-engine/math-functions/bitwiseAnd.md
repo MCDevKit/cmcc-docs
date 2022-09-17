@@ -7,20 +7,19 @@ title: bitwiseAnd
 
 # bitwiseAnd
 
-Performs bitwise AND operation on two numbers.
-
+Returns the bitwise AND of the given numbers.
 ## Arguments
 
- - a: First number
- - b: Second number
+- `number1` - The first number to bitwise AND.
+- `number2` - The second number to bitwise AND.
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 1",
-    "test": "{{"{{bitwiseAnd(5, 3)"}}}}"
+    "$comment": "The field below will be 2",
+    "test": "{{"{{bitwiseAnd(3, 2)"}}}}"
   }
 }
 ```

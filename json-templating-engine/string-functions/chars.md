@@ -7,19 +7,16 @@ title: chars
 
 # chars
 
-Returns an array of strings, where each string is another character.
-
+Returns the characters of a string as an array.
 ## Arguments
 
- - string: Text to convert
+- `string` - The string to split into characters.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be ['h', 'e', 'l', 'l', 'o']",
-    "test": "{{"{{chars('hello')"}}}}"
+    "$comment": "The field below will be ['t', 'h', 'i', 's']",
+    "test": "{{"{{chars('this')"}}}}"
   }
 }
-```

@@ -2,21 +2,21 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: String functions
-title: toLowerCase
+title: trim
 ---
 
-# toLowerCase
+# trim
 
-Converts a string to lowercase.
+Removes leading and trailing whitespace from a string.
 ## Arguments
 
-- `string` - The string to convert.
+- `string` - The string to trim.
 
 ## Example
 
 {
   "$template": {
     "$comment": "The field below will be 'this is a test'",
-    "test": "{{"{{toLowerCase('THIS IS A TEST')"}}}}"
+    "test": "{{"{{trim('  this is a test  ')"}}}}"
   }
 }

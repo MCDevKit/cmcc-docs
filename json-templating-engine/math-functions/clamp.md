@@ -7,10 +7,20 @@ title: clamp
 
 # clamp
 
-Returns the specified number if it’s within the specified range. If not, it will return range start or end.
-
+Returns the given number clamped between the given minimum and maximum.
 ## Arguments
 
- - number: A number
- - min: Range start
- - max: Range end
+- `number` - The number to clamp.
+- `min` - The minimum value.
+- `max` - The maximum value.
+
+## Example
+
+```json
+{
+  "$template": {
+    "$comment": "The field below will be 5",
+    "test": "{{"{{clamp(3, 5, 10)"}}}}"
+  }
+}
+```

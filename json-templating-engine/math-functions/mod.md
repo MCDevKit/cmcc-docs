@@ -7,12 +7,11 @@ title: mod
 
 # mod
 
-Returns the remainder (modulo) of the two arguments.
-
+Returns the remainder of the first number divided by the second number.
 ## Arguments
 
- - number: A number
- - denominator: A denominator
+- `number` - The number to divide.
+- `divisor` - The number to divide by.
 
 ## Example
 

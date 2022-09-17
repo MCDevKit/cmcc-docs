@@ -7,21 +7,18 @@ title: replace
 
 # replace
 
-Returns string from the first argument with occurrences of the second argument replaced by third argument.
-
+Replaces all occurrences of a substring within a string with another string.
 ## Arguments
 
- - original string: String to be modified
- - target: String to be replaced
- - replacement: Replacement string
+- `string` - The string to search.
+- `old` - The substring to replace.
+- `new` - The string to replace with.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be 'this_is_a_test'",
     "test": "{{"{{replace('this is a test', ' ', '_')"}}}}"
   }
 }
-```

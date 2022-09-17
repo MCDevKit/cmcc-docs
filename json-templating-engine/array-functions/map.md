@@ -7,20 +7,19 @@ title: map
 
 # map
 
-Returns a new array, where every element is mapped to another value using provided lambda.
-
+Maps the elements in the given array based on the given selector
 ## Arguments
 
- - array: Source array
- - lambda(element, index): Lambda, that should return new element value
+- `array` - The array to map
+- `selector(element, index)` - The selector to apply to each element
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be [0, 2, 4, 6, 8]",
-    "test": "{{"{{(0..4).map(x => x => x * 2)"}}}}"
+	"$comment": "The field below will be [2, 4, 6, 10, 16, 20]",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].map(x => x * 2)"}}}}"
   }
 }
 ```

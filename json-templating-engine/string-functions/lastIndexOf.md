@@ -2,12 +2,12 @@
 layout: page
 grand_parent: JSON Templating Engine
 parent: String functions
-title: indexOf
+title: lastIndexOf
 ---
 
-# indexOf
+# lastIndexOf
 
-Returns the index of the first occurrence of a substring within a string.
+Returns the index of the last occurrence of a substring within a string.
 ## Arguments
 
 - `string` - The string to search.
@@ -18,6 +18,6 @@ Returns the index of the first occurrence of a substring within a string.
 {
   "$template": {
     "$comment": "The field below will be 8",
-    "test": "{{"{{indexOf('this is a test', 'test')"}}}}"
+    "test": "{{"{{lastIndexOf('this is a test', 'test')"}}}}"
   }
 }

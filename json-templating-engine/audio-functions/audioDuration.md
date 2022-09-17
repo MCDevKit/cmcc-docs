@@ -7,21 +7,15 @@ title: audioDuration
 
 # audioDuration
 
-Returns duration of audio in seconds from file path in first argument.
-
-Currently, only supports PCM WAV files in RIFF format.
-
-
+Returns the duration of an audio file in seconds.
 ## Arguments
 
- - path: A path to the audio file
+- `path` - The path to the audio file.
 
 ## Example
 
-```json
 {
   "$template": {
     "test": "{{"{{audioDuration('resources/sounds/sound.wav')"}}}}"
   }
 }
-```

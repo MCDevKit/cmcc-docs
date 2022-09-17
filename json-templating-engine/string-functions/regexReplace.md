@@ -7,21 +7,18 @@ title: regexReplace
 
 # regexReplace
 
-Replaces each substring of this string that matches the given regular expression with the given replacement.
-
+Replaces the first occurrence of a substring that matches a regular expression.
 ## Arguments
 
- - string: Text to transform
- - string: Regular expression
- - string: Replacement
+- `string` - The string to search.
+- `regex` - The regular expression to search for.
+- `replacement` - The string to replace the substring with.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be player.first_person",
-    "test": "{{"{{regexReplace('controller.animation.player.first_person', '(?:controller\.)?(?:animation\.)(.+)', '$1'))"}}}}"
+    "$comment": "The field below will be 'this-is-a-test'",
+    "test": "{{"{{regexReplace('this is a test', '\s', '-')}"
   }
 }
-```

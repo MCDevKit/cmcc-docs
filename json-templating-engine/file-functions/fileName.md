@@ -7,19 +7,16 @@ title: fileName
 
 # fileName
 
-Returns a name and extension from file path in first argument.
-
+Gets the name of a file.
 ## Arguments
 
- - path: A path to the file
+- `path` - The path to the file.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be 'particles.png'",
-    "test": "{{"{{fileName('resources/textures/particle/particles.png')"}}}}"
+    "$comment": "The field below will be the name of the file data.json",
+    "test": "{{"{{fileName('dir/data.json')"}}}}"
   }
 }
-```

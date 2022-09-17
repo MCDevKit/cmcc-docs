@@ -7,18 +7,15 @@ title: imageWidth
 
 # imageWidth
 
-Returns an image width from file path in first argument.
-
+Gets the width of an image.
 ## Arguments
 
- - path: A path to the image
+- `path` - The path to the image file.
 
 ## Example
 
-```json
 {
   "$template": {
     "test": "{{"{{imageWidth('resources/textures/particle/particles.png')"}}}}"
   }
 }
-```

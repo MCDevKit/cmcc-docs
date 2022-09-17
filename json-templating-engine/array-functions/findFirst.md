@@ -7,20 +7,19 @@ title: findFirst
 
 # findFirst
 
-Returns the first element from an array filtered by the predicate.
-
+Finds the first element in the given array that matches the given predicate
 ## Arguments
 
- - array: Source array
- - predicate(element, index): Lambda, that should return whether an element should remain
+- `array` - The array to find in
+- `predicate(element, index)` - (optional) The predicate to match by
 
 ## Example
 
 ```json
 {
   "$template": {
-    "$comment": "The field below will be 0",
-    "test": "{{"{{(0..4).findFirst(x => mod(x, 2) == 0)"}}}}"
+	"$comment": "The field below will be 8",
+	"test": "{{"{{[1, 2, 3, 5, 8, 10].findFirst(x => x >= 5)"}}}}"
   }
 }
 ```

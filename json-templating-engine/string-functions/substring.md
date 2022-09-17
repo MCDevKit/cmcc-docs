@@ -7,21 +7,18 @@ title: substring
 
 # substring
 
-Returns a string that is a substring of this string. The substring begins at the specified beginIndex and extends to the character at index endIndex - 1 or to the end of the string, if none specified.
-
+Returns a substring of a string.
 ## Arguments
 
- - string: Text to transform
- - beginIndex: the beginning index, inclusive
- - endIndex: (optional) the ending index, exclusive
+- `string` - The string to get the substring from.
+- `start` - The starting index of the substring.
+- `end` - (optional) The ending index of the substring.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be 45",
-    "test": "{{"{{substring('123456789', 3, 5))"}}}}"
+    "$comment": "The field below will be 'this'",
+    "test": "{{"{{substring('this is a test', 0, 4)"}}}}"
   }
 }
-```

@@ -7,19 +7,16 @@ title: fileBaseName
 
 # fileBaseName
 
-Returns a name from file path in first argument.
-
+Gets the base name of a file.
 ## Arguments
 
- - path: A path to the file
+- `path` - The path to the file.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "The field below will be 'particles'",
-    "test": "{{"{{fileBaseName('resources/textures/particle/particles.png')"}}}}"
+    "$comment": "The field below will be 'data'",
+    "test": "{{"{{fileBaseName('data.json')"}}}}"
   }
 }
-```

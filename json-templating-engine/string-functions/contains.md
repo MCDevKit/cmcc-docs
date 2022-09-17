@@ -7,20 +7,17 @@ title: contains
 
 # contains
 
-Returns whether first string argument contains second string argument.
-
+Checks if a string contains a substring.
 ## Arguments
 
- - string: Text, on which the search is executed
- - string to search: Text to search
+- `string` - The string to search.
+- `substring` - The substring to search for.
 
 ## Example
 
-```json
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{contains('this_is_a_test', '_')"}}}}"
+    "test": "{{"{{contains('this is a test', 'test')"}}}}"
   }
 }
-```

@@ -7,20 +7,17 @@ title: join
 
 # join
 
-Joins all values in a given array and returns as a string.
-
+Joins an array of strings together into a single string, separated by a separator.
 ## Arguments
 
- - values to join: Array of values to join
- - delimiter: String inserted in between the values
+- `strings` - The array of strings to join together.
+- `separator` - The separator to use.
 
 ## Example
 
-```json
 {
   "$template": {
-    "$comment": "For an array ['this', 'is', 'a', 'test'] the field below will be 'this_is_a_test'",
-    "test": "{{"{{join(arr, '_')"}}}}"
+    "$comment": "The field below will be 'this,is,a,test'",
+    "test": "{{"{{join(['this', 'is', 'a', 'test'], ',')"}}}}"
   }
 }
-```
