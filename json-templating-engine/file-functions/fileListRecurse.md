@@ -8,6 +8,8 @@ title: fileListRecurse
 # fileListRecurse
 
 Lists all files in a directory, recursively.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the directory to list.

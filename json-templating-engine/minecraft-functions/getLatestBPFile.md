@@ -8,6 +8,8 @@ title: getLatestBPFile
 # getLatestBPFile
 
 Returns a path to the latest behavior pack file.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the file inside behavior pack.

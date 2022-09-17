@@ -8,6 +8,8 @@ title: fileList
 # fileList
 
 Lists all files in a directory.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the directory to list.

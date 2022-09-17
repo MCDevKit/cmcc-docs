@@ -8,6 +8,8 @@ title: getLatestRPFile
 # getLatestRPFile
 
 Returns a path to the latest resource pack file.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the file inside resource pack.

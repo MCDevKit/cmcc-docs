@@ -8,6 +8,8 @@ title: load
 # load
 
 Loads a JSON file from the given path.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the file to load.

@@ -8,6 +8,8 @@ title: isDir
 # isDir
 
 Checks if the given path is a directory.
+
+**This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
 - `path` - The path to the file.
