@@ -9,6 +9,8 @@ title: getMinecraftInstallDir
 
 Returns a path to the folder with Minecraft app. The value is cached after the first usage.
 
+**This function works only on Windows with installed Minecraft Bedrock.**
+
 **This method is marked as unsafe. It can be disabled in certain environments.**
 
 ## Example
