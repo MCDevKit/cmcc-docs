@@ -7,7 +7,7 @@ title: semver
 
 # semver
 
-Converts a string semver to semver object.
+Creates a new semver object from string, array or major, minor and patch numbers as separate arguments.
 ## Arguments
 
 - `version` - The semver string or array to parse. Optionally the major, minor and patch can be specified as separate arguments.
