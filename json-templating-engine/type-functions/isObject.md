@@ -16,9 +16,12 @@ Returns whether the argument is an object.
 
 ```json
 {
+  "$scope": {
+    "test": {}
+  },
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{isObject(\{\})"}}}}"
+    "test": "{{"{{isObject(test)"}}}}"
   }
 }
 ```
