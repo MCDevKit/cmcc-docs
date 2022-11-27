@@ -18,7 +18,7 @@ Returns whether the argument is an object.
 {
   "$template": {
     "$comment": "The field below will be true",
-    "test": "{{"{{isObject({})"}}}}"
+    "test": "{{"{{isObject(\{\})"}}}}"
   }
 }
 ```
