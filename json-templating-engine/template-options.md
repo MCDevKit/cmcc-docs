@@ -11,13 +11,14 @@ There are a number of options, you can define in a template.
 
 ## Scope
 
-This is the most important template options. It allows you to set some variables before templating. 
+This is the most important template options. It allows you to set some variables before templating. Additionally all variables inside the local scope (the one defined inside tempalate) are templated as well.
 
 ```json
 {
   "$scope": {
     "settings": {
-      "setting1": "value"
+      "setting1": "value",
+      "setting2": "{{"{{pi()"}}}}"
     }
   },
   "$template": {
@@ -27,27 +28,9 @@ This is the most important template options. It allows you to set some variables
 }
 ```
 
-The scope can also be defined globally in `project.json` file like this:
+The scope can also be defined globally in data directory. All json files inside that directory will be merged into one object, and that object will be used as a scope for all templates.
 
-```json
-{
-  "build": {
-    "file_name": "one-pack.mcaddon"
-  },
-  "install": {
-    "save_folder": "",
-    "install_in_dev": true
-  },
-  "name": "Pack name",
-  "description": "Pack description",
-  "ram_entity_identifier": "cl:ram",
-  "scope": {
-    "settings": {
-      "setting1": "value"
-    }
-  }
-}
-```
+Files and directories can be added to the scope with `--scope <path>` CLI option.
 
 ## Files
 
@@ -75,6 +58,8 @@ An option, that allows for completely copying contents of another file into curr
 }
 ```
 
+The path is a templated string, so you can use variables from the scope.
+
 ## Extend
 
 An option, that allows for merging one or more modules into the current template.
@@ -84,3 +69,13 @@ An option, that allows for merging one or more modules into the current template
   "$extend": ["module_name"]
 }
 ```
+
+Each element is a templated string, so you can add modules conditionally like this:
+
+```json
+{
+  "$extend": ["{{"{{=someCondition ? ['module_name'] : []"}}}}"]
+}
+``` 
+
+Further information on modules can be found in the [Modules](modules.md) section.

@@ -1,1 +1,1 @@
-# Official docs for CommandLang
+# Official docs for MCDevKit tools
