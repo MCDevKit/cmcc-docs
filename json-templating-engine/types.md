@@ -50,5 +50,31 @@ When using index operator, it will act as an array access operator and return an
 `object` is a type, that represents an object. 
 
 When using plus operator with another object, it will return a new object, that will have keys of both objects. If both objects have the same key, the value of the first object will be used.
+It can be used to provide default values for an object.
 
 When using index operator, it will act as an object access operator and return a value of the specified key or value of the key under specified index.
+
+## `semver`
+
+`semver` is a type, that represents a [semantic version](https://semver.org/). 
+
+All comparison operators can be used with `semver` type including less than and greater than operators.
+
+You can access all parts of the version by using these names:
+
+Major version: 
+ - `major`
+ - `a`
+ - `x`
+
+Minor version: 
+ - `minor`
+ - `b`
+ - `y`
+
+Patch version: 
+ - `patch`
+ - `c`
+ - `z`
+
+JsonTE contains a function for creating a semver type in the [Semver functions](semver-functions/index.md) section.
