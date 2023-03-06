@@ -11,6 +11,7 @@ Gets the path of a file.
 ## Arguments
 
 - `path` - The path to the file.
+- `separator` - Separator to use for the path.
 
 ## Example
 
@@ -18,7 +19,7 @@ Gets the path of a file.
 {
   "$template": {
     "$comment": "The field below will be 'data'",
-    "test": "{{"{{filePath('data.json')"}}}}"
+    "test": "{{"{{filePath('data/file.json')"}}}}"
   }
 }
 ```
