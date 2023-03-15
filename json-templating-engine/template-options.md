@@ -5,13 +5,13 @@ title: Template options
 nav_order: 1
 ---
 
-# Template options
+# Template Options
 
-There are a number of options, you can define in a template. 
+Template options provide flexibility in customizing the behavior of templates. Below are the key template options and their usage.
 
 ## Scope
 
-This is the most important template options. It allows you to set some variables before templating. Additionally all variables inside the local scope (the one defined inside tempalate) are templated as well.
+The scope is the most crucial template option, allowing you to predefine variables before templating. Additionally, all variables within the local scope (defined inside the template) will also be templated.
 
 ```json
 {
@@ -28,13 +28,13 @@ This is the most important template options. It allows you to set some variables
 }
 ```
 
-The scope can also be defined globally in data directory. All json files inside that directory will be merged into one object, and that object will be used as a scope for all templates.
+You can define the scope globally in the data directory. All JSON files within that directory will be merged into a single object and used as the scope for all templates.
 
-Files and directories can be added to the scope with `--scope <path>` CLI option.
+To add files and directories to the scope, use the `--scope <path>` CLI option.
 
 ## Files
 
-A very important option, that allows for creating multiple files from one template. The example below will create 5 files.
+The files option allows for generating multiple files from a single template. The following example creates five files:
 
 ```json
 {
@@ -43,14 +43,14 @@ A very important option, that allows for creating multiple files from one templa
     "fileName": "test_{{"{{value"}}}}"
   },
   "$template": {
-    "test": "{{value}}"
+    "test": "{{"{{value"}}}}"
   }
 }
 ```
 
 ## Copy
 
-An option, that allows for completely copying contents of another file into current file. Copied contents are merged with modules and template.
+The copy option enables you to duplicate the contents of another file into the current file. The copied contents will be merged with modules and templates.
 
 ```json
 {
@@ -58,11 +58,11 @@ An option, that allows for completely copying contents of another file into curr
 }
 ```
 
-The path is a templated string, so you can use variables from the scope.
+Paths are templated strings, so you can use variables from the scope.
 
 ## Extend
 
-An option, that allows for merging one or more modules into the current template.
+The extend option allows merging one or more modules into the current template.
 
 ```json
 {
@@ -70,12 +70,12 @@ An option, that allows for merging one or more modules into the current template
 }
 ```
 
-Each element is a templated string, so you can add modules conditionally like this:
+Each element is a templated string, so you can conditionally add modules like this:
 
 ```json
 {
   "$extend": ["{{"{{=someCondition ? ['module_name'] : []"}}}}"]
 }
-``` 
+```
 
-Further information on modules can be found in the [Modules](modules.md) section.
+For more information on modules, refer to the [Modules](modules.md) section.

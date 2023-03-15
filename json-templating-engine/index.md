@@ -4,14 +4,16 @@ title: JSON Templating Engine
 has_children: true
 ---
 
-# JSON Templating Engine
+# JSON Templating Engine Documentation
 
-JSON Templating Engine is a simple templating engine, that speeds up generating large amounts of JSON files.
-It follows usual JSON syntax and name should have an extension `.templ`.
+The JSON Templating Engine is a user-friendly templating engine designed to streamline the process of generating large numbers of JSON files. It adheres to standard JSON syntax, and files should have the `.templ` extension.
 
-For interactive tutorial, [click here](https://mcdevkit.com/tutorial)
+To access an interactive tutorial, [click here](https://mcdevkit.com/tutorial).
 
-Simple real life example:
+## Example: Creating a Loot Table with All Possible Potions
+
+Below is a real-life example demonstrating how to create a loot table that includes all possible potions using the JSON Templating Engine:
+
 ```json
 {
   "$template": {
@@ -20,7 +22,7 @@ Simple real life example:
         "rolls": 1,
         "entries": [
           {
-            "$comment": "Iterate over range of 5 to 42 (inclusive)",
+            "$comment": "Iterate over the range of 5 to 42 (inclusive)",
             "{{"{{#5..42"}}}}": {
               "type": "item",
               "name": "minecraft:potion",
@@ -28,7 +30,7 @@ Simple real life example:
               "functions": [
                 {
                   "function": "minecraft:set_data",
-                  "$comment": "Set data field to the index value. '=' sign will force conversion to a number",
+                  "$comment": "Set the data field to the index value. The '=' sign forces conversion to a number",
                   "data": "{{"{{=value"}}}}"
                 }
               ]
@@ -41,7 +43,6 @@ Simple real life example:
 }
 ```
 
-In JSON above, we want to create a loot table, that will include all possible potions. 
-To do that, we repeat the block from field `{{"{{#5..42"}}}}` each time replacing `value` variable with number between 5 and 42.
+In the JSON example above, we want to create a loot table that includes all possible potions. To achieve this, we repeat the block from the field `{{"{{#5..42"}}}}` and replace the `value` variable with a number between 5 and 42 for each iteration.
 
-To preview the result, you can try it [online](https://mcdevkit.com/#showcase) in box titled 'JSON Templating Engine'.
+You can preview the result [online](https://mcdevkit.com/#showcase) in the 'JSON Templating Engine' section.

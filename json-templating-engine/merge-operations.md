@@ -5,15 +5,16 @@ title: Merge operations
 nav_order: 5
 ---
 
-# Merge operations
+# Merge Operations
 
-When merging two objects or arrays, there are different behaviors, that can be used to control the result.
+Merging operations involve combining two objects or arrays, and you can control the behavior of the result by using different techniques.
 
-## Merging objects
+## Merging Objects
 
-When merging two objects, the result will be a new object, that will have keys of both objects. If both objects have the same key with a primitive value, the value of the first object will be used.
+When merging two objects, a new object is created, containing the keys of both original objects. If both objects share a key with a primitive value, the value from the first object is used.
 
-The following module `test` will be used for all object examples:
+Consider the following `test` module for object examples:
+
 ```json
 {
     "$module": "test",
@@ -26,6 +27,8 @@ The following module `test` will be used for all object examples:
 }
 ```
 
+### Basic Object Merging
+
 ```json
 {
     "$extend": "test",
@@ -36,6 +39,7 @@ The following module `test` will be used for all object examples:
         }
     }
 }
+```
 
 Result:
 
@@ -49,9 +53,9 @@ Result:
 }
 ```
 
-### Replacing values
+### Replacing Values
 
-We can add a `$` prefix to the key, to replace the value of the key, instead of merging it.
+Add a `$` prefix to the key to replace the value of the key instead of merging it.
 
 ```json
 {
@@ -63,6 +67,7 @@ We can add a `$` prefix to the key, to replace the value of the key, instead of 
         }
     }
 }
+```
 
 Result:
 
@@ -75,9 +80,9 @@ Result:
 }
 ```
 
-### Removing keys
+### Removing Keys
 
-To remove a key from an object, we can set its value to `null`.
+Set a key's value to `null` to remove it from an object.
 
 ```json
 {
@@ -88,6 +93,7 @@ To remove a key from an object, we can set its value to `null`.
         }
     }
 }
+```
 
 Result:
 
@@ -99,11 +105,12 @@ Result:
 }
 ```
 
-## Merging arrays
+## Merging Arrays
 
-When merging two arrays, the result will be a new array, that will have elements of both arrays.
+When merging two arrays, a new array is created, containing elements from both original arrays.
 
-The following module `test` will be used for all array examples:
+Consider the following `test` module for array examples:
+
 ```json
 {
     "$module": "test",
@@ -113,6 +120,8 @@ The following module `test` will be used for all array examples:
 }
 ```
 
+### Basic Array Merging
+
 ```json
 {
     "$extend": "test",
@@ -120,6 +129,7 @@ The following module `test` will be used for all array examples:
         "test": [3, 4]
     }
 }
+```
 
 Result:
 
@@ -129,9 +139,9 @@ Result:
 }
 ```
 
-### Replacing values
+### Replacing Values
 
-We can add a `$` prefix to the key, to replace the value of the key, instead of merging it.
+Add a `$` prefix to the key to replace the value of the key instead of merging it.
 
 ```json
 {
@@ -140,6 +150,7 @@ We can add a `$` prefix to the key, to replace the value of the key, instead of 
         "$test": [3, 4]
     }
 }
+```
 
 Result:
 
@@ -149,9 +160,9 @@ Result:
 }
 ```
 
-### Prepending values
+### Prepending Values
 
-We can add a `^` prefix to the key, to prepend the value of the key, instead of appending it.
+Add a `^` prefix to the key to prepend the value of the key instead of appending it.
 
 ```json
 {
@@ -160,6 +171,7 @@ We can add a `^` prefix to the key, to prepend the value of the key, instead of 
         "^test": [3, 4]
     }
 }
+```
 
 Result:
 

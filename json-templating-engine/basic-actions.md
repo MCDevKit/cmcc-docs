@@ -5,39 +5,36 @@ title: Basic Actions
 nav_order: 0
 ---
 
-# Basic Actions
+# Basic Actions Documentation
+
+This documentation page provides an overview of basic actions available in the template language. The actions described here include: Value, Casting Value, Iteration, and Predicate.
 
 ## Value
 
-The most basic operation, you can do is replace a template string with a value e.g. `{{"{{variable"}}}}`.
-This action can be added in the middle of other text like this `key_{{"{{variable"}}}}`.
+To replace a template string with a value, simply use the double curly braces notation: `{{"{{variable"}}}}`. This action can be embedded within other text as follows: `key_{{"{{variable"}}}}`.
 
 ## Casting Value
 
-An extension of the value action is casting value, which will force the template string to be a number. 
-It is used by adding `=` character at the beginning of a template string like so `{{"{{=variable"}}}}`.
+Casting Value is an extension of the Value action that ensures the template string is of the same type as the underlying variable. To use this action, prepend the template string with an equal sign: `{{"{{=variable"}}}}`.
 
 ## Iteration
 
-Iteration is an action, that will repeat a JSON element over an array, or a range. 
-It is triggered by beginning a template string with `#` e.g. `{{"{{#array"}}}}`.
+Iteration is an action that repeats a JSON element over an array or range. To initiate iteration, start the template string with a hashtag: `{{"{{#array"}}}}`.
 
-Every iteration will also expose variables:
- - index: a current index of iteration
- - value: a current element of iteration (this can be changed like this `{{"{{#array as element"}}}}`)
+During iteration, the following variables are exposed:
 
-Additionally, if the current iteration element is an object, all it's properties will be available without specifying the element name.
-So for example if you are iteration over array of objects and all objects have properties `id`, instead of using `{{"{{value.id"}}}}` you can just use `{{id}}`.
+- `index`: The current index of iteration. To change it, use the format `{{"{{#array as value, i"}}}}`.
+- `value`: The current element of iteration. To change it, use the format `{{"{{#array as element"}}}}`.
+
+If the current iteration element is an object, its properties will be directly available without specifying the element name. For example, if you are iterating over an array of objects with the property `id`, instead of using `{{"{{value.id"}}}}`, you can simply use `{{"{{id"}}}}`.
 
 ## Predicate
 
-Predicate will add its value only if the condition inside it is true.
-It is used by adding `?` character at the beginning of a template string like so `{{"{{?condition"}}}}`.
+A Predicate action includes its value only if the condition within it evaluates to true. To use this action, begin the template string with a question mark: `{{"{{?condition"}}}}`.
 
-## Example using all actions
+## Example Using All Actions
 
-Example below will iterate over range of 0 to 5 and for every number, it will create a field named `key_<value>`.
-The value of each field will be multiplied by 10 for numbers between 3 and 5 and the same number for rest of the numbers.
+The example below iterates over a range of 0 to 5, creating a field named `key_<value>` for each number. The value of each field will be multiplied by 10 for numbers between 3 and 5, and remain the same for the rest of the numbers.
 
 ```json
 {
@@ -54,7 +51,8 @@ The value of each field will be multiplied by 10 for numbers between 3 and 5 and
 }
 ```
 
-Example above will result in this JSON:
+The example above results in the following JSON:
+
 ```json
 {
   "key_3": 30,

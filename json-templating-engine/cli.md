@@ -5,51 +5,64 @@ title: CLI options
 nav_order: 5
 ---
 
-# CLI options
+# CLI Options
 
-## Global options
+This documentation provides an overview of the various command-line interface (CLI) options available for the JSONTE tool. These options can be divided into global options and action-specific options.
 
- - `--debug` - Enables debug mode. In debug mode, the engine will print extra information to the console.
- - `--silent` - Reduces the amount of information printed to the console. This flag will have no effect when `--debug` is enabled.
- - `--minify` - Minifies the output. 
- - `--scope` - Adds a file or directory to the scope. This option can be used multiple times.
- - `--cache-dir` - Sets the cache directory. 
- - `--seed` - Sets the seed for random number generator. 
+## Global Options
 
-## `compile` action
+These options can be used with any action:
 
-This action will compile templates and save the results to the output directory.
+- `--debug`: Enable debug mode. When active, the engine prints additional information to the console.
+- `--silent`: Suppress console output. This flag is ignored if `--debug` is enabled.
+- `--minify`: Minify the output.
+- `--scope`: Add a file or directory to the scope. Can be used multiple times.
+- `--cache-dir`: Specify the cache directory.
+- `--seed`: Set the seed for the random number generator.
 
-Example:
-```
+## Actions
+
+### `compile`
+
+The `compile` action compiles templates and saves the results to the output directory.
+
+**Usage:**
+
+```sh
 jsonte compile --out ./result ./src
 ```
 
- - `--out` - Sets the output directory. 
- - `--include` - Adds a glob pattern for a file or a directory to the include list. This option can be used multiple times. This list has a higher priority than the exclude list.
- - `--exclude` - Adds a glob pattern for a file or a directory to the exclude list. This option can be used multiple times.
- - `--remove-src` - Removes the source templates after compilation. Flag used mainly for Regolith filter.
+**Options:**
 
-## `eval` action
+- `--out`: Specify the output directory.
+- `--include`: Add a file or directory to the include list using a glob pattern. Can be used multiple times. Takes precedence over the exclude list.
+- `--exclude`: Add a file or directory to the exclude list using a glob pattern. Can be used multiple times.
+- `--remove-src`: Remove source templates after compilation. Primarily used for the Regolith filter.
 
-This action will evaluate an expression and print the result to the console. If no expression is provided, the engine will start a REPL.
+### `eval`
 
-Example:
-```
+The `eval` action evaluates an expression and prints the result to the console. If no expression is provided, the engine starts a REPL.
+
+**Usage:**
+
+```sh
 jsonte eval "pi()"
 ```
 
-## `version` action
+### `version`
 
-This action will print the version of the engine to the console.
+The `version` action displays the engine version in the console.
 
-## `ipc` action
+### `ipc`
 
-This action will start an IPC server. The server will listen for requests on the named pipe. 
+The `ipc` action initiates an Inter-Process Communication (IPC) server. The server listens for requests on the named pipe.
 
-Example:
-```
+**Usage:**
+
+```sh
 jsonte ipc
 ```
 
- - `--ipc-name` - Sets the name of the named pipe. Defaults to `jsonte`.
+**Options:**
+
+- `--ipc-name`: Set the named pipe's name. Defaults to `jsonte`.

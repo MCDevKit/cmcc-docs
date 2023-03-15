@@ -5,12 +5,13 @@ title: Modules
 nav_order: 2
 ---
 
-# Modules
+# Modules in JSON Templates
 
-Modules are templates, that are not directly generated into the output, but rather are merged with other templates.
-Modules are mainly used to define often repeating parts of json across many templates.
+Modules are pre-defined templates that are not directly generated into the output. Instead, they are merged with other templates to simplify and streamline the creation of complex JSON structures. Modules are particularly useful for defining recurring parts of JSON across multiple templates.
 
-A sample module looks like this:
+## Sample Module Structure
+
+Here is a basic example of a module:
 
 ```jsonc
 {
@@ -21,9 +22,9 @@ A sample module looks like this:
 }
 ```
 
-# Example usage
+## Example Usage: Despawn Mechanic
 
-A good example of a module is a module, that adds a despawn mechanic to an entity.
+A practical use case for a module is adding a despawn mechanic to an entity. The following example demonstrates how to create a module for this purpose:
 
 ```jsonc
 {
@@ -47,11 +48,13 @@ A good example of a module is a module, that adds a despawn mechanic to an entit
 }
 ```
 
+To apply the despawn mechanic to a specific entity, such as a zombie, you can extend the zombie entity with the despawn module as shown below:
+
 ```jsonc
 {
   "$extend": ["despawn"],
-  "$copy": "C:\\Program Files\\WindowsApps\\Microsoft.MinecraftUWP_1.16.21060.0_x64__8wekyb3d8bbwe\\data\\behavior_packs\\vanilla\\entities\\zombie.json"
+  "$copy": "{{"{{getLatestBPFile('entities/zombie.json')"}}}}"
 }
 ```
 
-Above example will define a despawn module and copy a zombie entity extended with that despawn module.
+This example defines a despawn module and extends a zombie entity with it, effectively adding the despawn mechanic to the entity.
