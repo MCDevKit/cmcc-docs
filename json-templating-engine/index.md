@@ -4,7 +4,7 @@ title: JSON Templating Engine
 has_children: true
 ---
 
-# JSON Templating Engine Documentation
+# JSON Templating Engine
 
 The JSON Templating Engine is a user-friendly templating engine designed to streamline the process of generating large numbers of JSON files. It adheres to standard JSON syntax, and files should have the `.templ` extension.
 

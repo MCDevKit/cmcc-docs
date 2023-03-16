@@ -5,7 +5,7 @@ title: Basic Actions
 nav_order: 0
 ---
 
-# Basic Actions Documentation
+# Basic Actions
 
 This documentation page provides an overview of basic actions available in the template language. The actions described here include: Value, Casting Value, Iteration, and Predicate.
 

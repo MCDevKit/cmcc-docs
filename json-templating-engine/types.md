@@ -14,6 +14,7 @@ JsonTE supports all fundamental data types found in JSON, as well as an addition
 - `string`
 - `array`
 - `object`
+- `semver`
 
 ## `null`
 
@@ -29,15 +30,41 @@ The `number` type represents numerical values, which can be either integers or f
 
 ## `string`
 
-The `string` type represents text and can be enclosed in either single or double quotes. When used with the plus operator, it acts as a concatenation operator, appending the string representation of another value. When used with the index operator, it provides access to individual characters within the string.
+The `string` data type is used to represent textual information and can be enclosed within either single (`'`) or double (`"`) quotes. When the plus (`+`) operator is used with strings, it functions as a concatenation operator, joining the string representation of another value to the original string. The index operator (`[]`) allows access to individual characters within the string by specifying their position.
 
 ## `array`
 
-The `array` type represents an ordered collection of elements. A variety of useful functions can be found in the [Array Functions](array-functions/index.md) section. When used with the plus operator alongside another array, it returns a new array containing elements from both arrays. When used with the index operator, it provides access to elements at the specified index. Negative indices access elements from the end of the array.
+The `array` type is an ordered collection of elements, offering a wide range of functionality to manipulate and process data. To explore the available functions, refer to the [Array Functions](array-functions/index.md) section.
+
+When combining two arrays using the plus (`+`) operator, a new array is created that consists of the elements from both input arrays. For example:
+
+```json
+{
+  "$template": {
+    "array1": [1, 2, 3],
+    "array2": [4, 5, 6],
+    "combined_array": "{{"{{array1 + array2"}}}}"
+  }
+}
+```
+
+To access individual elements within an array, use the index operator (`[]`). The index is zero-based, meaning the first element is at index `0`. Negative indices allow you to access elements from the end of the array, with `-1` referring to the last element. For example:
+
+```json
+{
+  "$template": {
+    "array": [1, 2, 3, 4, 5],
+    "first_element": "{{"{{array[0]"}}}}",
+    "last_element": "{{"{{array[-1]"}}}}"
+  }
+}
+```
 
 ## `object`
 
-The `object` type represents a collection of key-value pairs. When used with the plus operator in conjunction with another object, it returns a new object containing keys from both objects. If both objects share a key, the value from the first object is used. This behavior is useful for providing default values for an object. When used with the index operator, it provides access to the value associated with the specified key or the value of the key at the specified index.
+The `object` type represents a collection of key-value pairs, which allows for easy storage and retrieval of data. When you use the plus operator (`+`) to combine two objects, it generates a new object containing keys and their corresponding values from both of the original objects. If the two objects share a common key, the value from the first object takes precedence. This feature is particularly useful for setting default values in an object.
+
+To access a specific value within an object, you can use the index operator (`[]`). By providing the desired key or index within the square brackets, you can quickly retrieve the associated value.
 
 ## `semver`
 

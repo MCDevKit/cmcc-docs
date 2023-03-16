@@ -1,7 +1,7 @@
 ---
 layout: page
 parent: JSON Templating Engine
-title: Modules
+title: Modules in JSON Templates
 nav_order: 2
 ---
 
