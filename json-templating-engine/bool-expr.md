@@ -7,7 +7,7 @@ nav_order: 7
 
 # Boolean Expressions
 
-This page provides an overview of boolean expressions in JSON templates, including comparison operators, logical operators, truthy and falsy values, and the ternary operator. While JSON template expressions share similarities with JavaScript expressions, there are some key differences.
+This page provides an overview of boolean expressions in JSON templates, including comparison operators, logical operators, truthy and falsy values. While JSON template expressions share similarities with JavaScript expressions, there are some key differences.
 
 ## Comparison Operators
 
@@ -88,15 +88,3 @@ In JSON templates, the following values are considered falsy and evaluate to `fa
 - `''` (empty string or a string containing only newlines and carriage returns)
 
 All other values are considered truthy.
-
-## Ternary Operator
-
-The ternary operator is supported in JSON templates for evaluating a condition and returning one of two values based on the condition's result. The syntax is as follows:
-
-```json
-{
-  "$template": {
-    "key": "{{"{{condition ? valueIfTrue : valueIfFalse"}}}}"
-  }
-}
-```
