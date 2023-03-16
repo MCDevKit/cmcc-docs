@@ -61,7 +61,7 @@ In this example, the `&&` operator stops evaluating expressions after the first 
 ```json
 {
   "$template": {
-    "key": "{{"{{false && expensiveFunction()}}"}}"
+    "key": "{{"{{false && expensiveFunction()"}}}}"
   }
 }
 ```
@@ -71,7 +71,7 @@ In this example, the `||` operator stops evaluating expressions after the first 
 ```json
 {
   "$template": {
-    "key": "{{"{{true || expensiveFunction()}}"}}"
+    "key": "{{"{{true || expensiveFunction()"}}}}"
   }
 }
 ```

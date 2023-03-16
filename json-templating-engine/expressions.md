@@ -16,7 +16,7 @@ The range operator in JSON templates generates a sequence of numbers within a sp
 ```json
 {
   "$template": {
-    "key": "{{"{{start..end}}"}}"
+    "key": "{{"{{start..end"}}}}"
   }
 }
 ```
@@ -30,7 +30,7 @@ The ternary operator in JSON templates evaluates a condition and returns one of 
 ```json
 {
   "$template": {
-    "key": "{{"{{condition ? valueIfTrue : valueIfFalse}}"}}"
+    "key": "{{"{{condition ? valueIfTrue : valueIfFalse"}}}}"
   }
 }
 ```
@@ -42,7 +42,7 @@ The null coalescing operator in JSON templates provides an alternative value if 
 ```json
 {
   "$template": {
-    "key": "{{"{{expression ?? valueIfNull}}"}}"
+    "key": "{{"{{expression ?? valueIfNull"}}}}"
   }
 }
 ```
@@ -56,7 +56,7 @@ JSON templates support object and array literals, enabling you to create complex
 ```json
 {
   "$template": {
-    "key": "{{"{{[1, 2, 3]}}"}}"
+    "key": "{{"{{[1, 2, 3]"}}}}"
   }
 }
 ```
@@ -66,7 +66,7 @@ JSON templates support object and array literals, enabling you to create complex
 ```json
 {
   "$template": {
-    "key": "{{"{{{'key1': 'value1', 'key2': 'value2'}}}}"}}"
+    "key": "{{"{{{'key1': 'value1', 'key2': 'value2'"}}}}}}"
   }
 }
 ```
