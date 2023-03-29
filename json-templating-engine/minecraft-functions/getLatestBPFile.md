@@ -13,6 +13,7 @@ Returns a path to the latest behavior pack file.
 ## Arguments
 
 - `path` - The path to the file inside behavior pack.
+- `shouldFail` - (optional) Whether to throw an error and stop compilation or return null when the file is not found.
 
 ## Example
 
