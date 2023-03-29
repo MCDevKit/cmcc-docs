@@ -1,7 +1,7 @@
 ---
 layout: page
 parent: JSON Templating Engine
-title: Template options
+title: Template Options
 nav_order: 1
 ---
 
@@ -59,6 +59,14 @@ The copy option enables you to duplicate the contents of another file into the c
 ```
 
 Paths are templated strings, so you can use variables from the scope.
+
+To copy multiple files, specify them as an array:
+
+```json
+{
+  "$copy": ["path/to/another/file.json", "path/to/another/file2.json"]
+}
+```
 
 ## Extend
 

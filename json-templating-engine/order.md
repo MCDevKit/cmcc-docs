@@ -17,9 +17,11 @@ Copy expressions are evaluated first, enabling you to duplicate the contents of 
 
 ```json
 {
-  "$copy": "path/to/another/file.json"
+  "$copy": ["path/to/another/file.json", "path/to/another/file2.json"]
 }
 ```
+
+Copies are evaluated and merged sequentially, according to the order in which they are defined (from top to bottom).
 
 ## 2. Modules
 
