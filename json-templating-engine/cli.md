@@ -19,6 +19,7 @@ These options can be used with any action:
 - `--scope`: Add a file or directory to the scope. Can be used multiple times.
 - `--cache-dir`: Specify the cache directory.
 - `--seed`: Set the seed for the random number generator.
+- `--cache-all`: Enable caching of all function calls to optimize performance when repetitively processing large data sets with consistent operations. This flag streamlines workflows by reducing redundant computations and enhancing overall efficiency.
 
 ## Actions
 

@@ -39,7 +39,7 @@ In this example, `key` evaluates to `true` because the `>` operator applies to s
 ```json
 {
   "$template": {
-    "key": "{{"{{'1.0.1' > '1.0.0'"}}}}"
+    "key": "{{"{{semver('1.0.1') > semver('1.0.0')"}}}}"
   }
 }
 ```

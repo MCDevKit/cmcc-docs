@@ -66,9 +66,24 @@ JSON templates support object and array literals, enabling you to create complex
 ```json
 {
   "$template": {
-    "key": "{{"{{{'key1': 'value1', 'key2': 'value2'"}}}}}}"
+    "key": "{{"{{{'key1': 'value1', 'key2': 'value2'"}}}}}"
   }
 }
 ```
 
 By incorporating these expressions and operators, you can create dynamic and versatile JSON templates to suit various use cases.
+
+## `this` Keyword
+
+The `this` keyword in JSON templates represents the current scope, providing access to all properties within it. When not explicitly using the `.` or index operator, the keyword is implied. You can dynamically access fields with the `this` keyword, as demonstrated in the example below:
+
+```json
+{
+  "$template": {
+    "$comment": "The value below evaluates to true"
+    "key": "{{"{{this['key'] == this.key && this.key == key"}}}}"
+  }
+}
+```
+
+In this example, the `this` keyword is used to compare different ways of accessing the `key` property within the scope, ultimately resulting in a true evaluation.
