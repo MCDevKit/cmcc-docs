@@ -7,7 +7,7 @@ title: hexToArray
 
 # hexToArray
 
-Converts a hex color to an array of RGB values.
+Converts a hex color to an array of RGBA values.
 ## Arguments
 
 - `hex` - The hex color to convert.
