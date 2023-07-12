@@ -11,7 +11,7 @@ Sorts the given array
 ## Arguments
 
 - `array` - The array to sort
-- `selector(element, index)` - (optional) The selector to apply to each element before summing
+- `selector(element, index)` - (optional) The selector to apply to each element before sorting
 
 ## Example
 
