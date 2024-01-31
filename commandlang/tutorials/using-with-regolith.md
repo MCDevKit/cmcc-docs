@@ -26,7 +26,7 @@ regolith init
 After that we need to add JSON Templating Engine and CommandLang as filters.
 
 ```shell
-regolith install github.com/MCDevKit/regolith-library/json_templating_engine
+regolith install github.com/MCDevKit/regolith-library/jsonte
 regolith install github.com/MCDevKit/regolith-library/command_lang
 ```
 
@@ -41,7 +41,7 @@ The next step is to edit `config.json` file to add JSON Templating Engine and Co
       "default": {
         "filters": [
           {
-            "filter": "json_templating_engine"
+            "filter": "jsonte"
           },
           {
             "filter": "command_lang"
@@ -51,14 +51,6 @@ The next step is to edit `config.json` file to add JSON Templating Engine and Co
     }
   }
 }
-```
-
-## Unlocking community filters
-
-By default, Regolith blocks running community filters, which means that once per project, you need to unlock it by running this command.
-
-```shell
-regolith unlock
 ```
 
 ## Running the compiler
