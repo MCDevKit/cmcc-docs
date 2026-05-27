@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: CLI options
-nav_order: 5
+nav_order: 10
 ---
 
 # CLI Options
@@ -19,7 +19,10 @@ These options can be used with any action:
 - `--scope`: Add a file or directory to the scope. Can be used multiple times.
 - `--cache-dir`: Specify the cache directory.
 - `--seed`: Set the seed for the random number generator.
-- `--cache-all`: Enable caching of all function calls to optimize performance when repetitively processing large data sets with consistent operations. This flag streamlines workflows by reducing redundant computations and enhancing overall efficiency.
+- `--cache-all`: Enable caching of all function calls to optimize performance when repetitively processing large data sets with consistent operations.
+- `--safe-mode`: Disable functions that are marked as unsafe (primarily file system functions). Useful when running templates from untrusted sources.
+- `--server-mode`: Disable functions that require the Minecraft client to be installed (e.g. `getMinecraftInstallDir`). Intended for server-side or CI environments.
+- `--workers`: Set the maximum number of concurrent workers used during compilation. Defaults to `1`.
 
 ## Actions
 

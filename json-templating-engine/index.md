@@ -6,7 +6,17 @@ has_children: true
 
 # JSON Templating Engine
 
-The JSON Templating Engine is a user-friendly templating engine designed to streamline the process of generating large numbers of JSON files. It adheres to standard JSON syntax, and files should have the `.templ` extension.
+The JSON Templating Engine is a user-friendly templating engine designed to streamline the process of generating large numbers of JSON files. It adheres to standard JSON syntax, and template files should have the `.templ` extension.
+
+Several other file types are also supported:
+
+| Extension     | Expression syntax | Notes                                                                                           |
+| ------------- | ----------------- | ----------------------------------------------------------------------------------------------- |
+| `.templ`      | `{{...}}`         | Primary format - full JSON template support.                                                    |
+| `.jsonte`     | (script)          | Script file executed against the scope before templates run. See [Scripting](scripting.md).     |
+| `.mcfunction` | `#{...}`          | Minecraft function file - inline expression substitution.                                       |
+| `.molang`     | `#{...}`          | Molang file - `# ` line comments are stripped and the output is minified.                      |
+| `.lang`       | `##{...}`         | Minecraft lang file - line-by-line expression substitution.                                     |
 
 To access an interactive tutorial, [click here](https://mcdevkit.com/tutorial).
 

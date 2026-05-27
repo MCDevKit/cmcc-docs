@@ -2,54 +2,14 @@
 layout: page
 parent: JSON Templating Engine
 title: Expressions
-nav_order: 6
+nav_order: 2
 ---
 
 # Expressions
 
-This documentation page describes the various expressions and operators that you can use in JSON templates. These expressions allow you to generate dynamic content, evaluate conditions, and create complex structures.
-
-## Range Operator
-
-The range operator in JSON templates generates a sequence of numbers within a specified range. Here's the syntax:
-
-```json
-{
-  "$template": {
-    "key": "{{"{{start..end"}}}}"
-  }
-}
-```
-
-Both `start` and `end` values are inclusive, and they must be integers. The `start` value should be less than the `end` value. If you use floating-point numbers, the range operator will cast them to integers.
-
-## Ternary Operator
-
-The ternary operator in JSON templates evaluates a condition and returns one of two values based on the outcome. Here's the syntax:
-
-```json
-{
-  "$template": {
-    "key": "{{"{{condition ? valueIfTrue : valueIfFalse"}}}}"
-  }
-}
-```
-
-## Null Coalescing Operator
-
-The null coalescing operator in JSON templates provides an alternative value if the initial expression evaluates to `null`. Here's the syntax:
-
-```json
-{
-  "$template": {
-    "key": "{{"{{expression ?? valueIfNull"}}}}"
-  }
-}
-```
-
 ## Object and Array Literals
 
-JSON templates support object and array literals, enabling you to create complex structures. Here's the syntax for both:
+JSON templates support object and array literals, enabling you to create complex structures:
 
 ### Array literals:
 
@@ -71,19 +31,85 @@ JSON templates support object and array literals, enabling you to create complex
 }
 ```
 
-By incorporating these expressions and operators, you can create dynamic and versatile JSON templates to suit various use cases.
+## Backtick Template Strings
 
-## `this` Keyword
-
-The `this` keyword in JSON templates represents the current scope, providing access to all properties within it. When not explicitly using the `.` or index operator, the keyword is implied. You can dynamically access fields with the `this` keyword, as demonstrated in the example below:
+Backtick strings (`` ` `` ... `` ` ``) are multi-part strings with embedded expressions using `${...}` interpolation. Unlike the `{{...}}` notation used in JSON template keys and values, backtick strings let you embed multiple expressions inline within a single string expression:
 
 ```json
 {
   "$template": {
-    "$comment": "The value below evaluates to true"
-    "key": "{{"{{this['key'] == this.key && this.key == key"}}}}"
+    "greeting": "{{"{{=`Hello, ${name}! You have ${count} messages.`"}}}}"
   }
 }
 ```
 
-In this example, the `this` keyword is used to compare different ways of accessing the `key` property within the scope, ultimately resulting in a true evaluation.
+The `${...}` blocks support any expression. Escape sequences (`\n`, `\t`, `\\`, etc.) work the same as in regular strings.
+
+## Lambda Expressions
+
+Lambda expressions define inline functions, primarily used as arguments to higher-order functions like `map`, `filter`, `reduce`, and `sort`.
+
+### Single-parameter lambda:
+
+```json
+{
+  "$template": {
+    "doubled": "{{"{{=[1, 2, 3].map(x => x * 2)"}}}}"
+  }
+}
+```
+
+### Multi-parameter lambda:
+
+```json
+{
+  "$template": {
+    "sum": "{{"{{=[1, 2, 3].reduce((acc, x) => acc + x, 0)"}}}}"
+  }
+}
+```
+
+### Block-body lambda:
+
+Lambdas can have a block body with multiple statements using `return` to produce a value:
+
+```json
+{
+  "$template": {
+    "result": "{{"{{=[1, 2, 3, 4].filter(x => { return x % 2 == 0; })"}}}}"
+  }
+}
+```
+
+## Comments
+
+Expressions support both line and block comments:
+
+```json
+{
+  "$template": {
+    "key": "{{"{{value + 1 // add one"}}}}"
+  }
+}
+```
+
+```json
+{
+  "$template": {
+    "key": "{{"{{/* ignored */ value + 1"}}}}"
+  }
+}
+```
+
+## `this` Keyword
+
+The `this` keyword represents the current scope, providing access to all properties within it. When not explicitly using the `.` or index operator, the keyword is implied. You can dynamically access fields with the `this` keyword:
+
+```json
+{
+  "$template": {
+    "$comment": "The value below evaluates to true",
+    "key": "{{"{{this['key'] == this.key && this.key == key"}}}}"
+  }
+}
+```

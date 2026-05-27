@@ -2,16 +2,18 @@
 layout: page
 parent: JSON Templating Engine
 title: Template Options
-nav_order: 1
+nav_order: 4
 ---
 
 # Template Options
 
-Template options provide flexibility in customizing the behavior of templates. Below are the key template options and their usage.
+Template options control how a template is evaluated. They are top-level keys placed alongside `$template` in a `.templ` file.
 
-## Scope
+For composing templates with other files and modules, see [Modules](modules.md).
 
-The scope is the most crucial template option, allowing you to predefine variables before templating. Additionally, all variables within the local scope (defined inside the template) will also be templated.
+## `$scope`
+
+Predefines variables that are available during templating. Values inside `$scope` are themselves evaluated as template expressions.
 
 ```json
 {
@@ -28,13 +30,13 @@ The scope is the most crucial template option, allowing you to predefine variabl
 }
 ```
 
-You can define the scope globally in the data directory. All JSON files within that directory will be merged into a single object and used as the scope for all templates.
+You can also define a global scope by pointing the `--scope` CLI option at a file or directory. All JSON files in that directory are merged into a single object and made available to every template.
 
-To add files and directories to the scope, use the `--scope <path>` CLI option.
+## `$files`
 
-## Files
+Generates multiple output files from a single template. The `array` field is an **expression string** evaluated at runtime - it must produce an array. The `fileName` field is a templated string used as the output filename for each element.
 
-The files option allows for generating multiple files from a single template. The following example creates five files:
+The following example creates five files named `test_1.json` through `test_5.json`:
 
 ```json
 {
@@ -48,42 +50,36 @@ The files option allows for generating multiple files from a single template. Th
 }
 ```
 
-## Copy
+During each iteration the following variables are available in scope:
 
-The copy option enables you to duplicate the contents of another file into the current file. The copied contents will be merged with modules and templates.
+- `value`: the current array element
+- `index`: the zero-based position
 
-```json
-{
-  "$copy": "path/to/another/file.json"
-}
-```
+If an element is an object, its properties are additionally pushed into scope directly (same behaviour as [Iteration](basic-actions.md#iteration)).
 
-Paths are templated strings, so you can use variables from the scope.
-
-To copy multiple files, specify them as an array:
+The `array` expression can reference any scope variable or expression that produces an array:
 
 ```json
 {
-  "$copy": ["path/to/another/file.json", "path/to/another/file2.json"]
+  "$files": {
+    "array": "items",
+    "fileName": "{{"{{value.id"}}}}"
+  },
+  "$template": {
+    "name": "{{"{{value.name"}}}}"
+  }
 }
 ```
 
-## Extend
+## `$comment`
 
-The extend option allows merging one or more modules into the current template.
+Adds a human-readable annotation anywhere inside a `$template` object. It is silently discarded and never appears in the output.
 
 ```json
 {
-  "$extend": ["module_name"]
+  "$template": {
+    "$comment": "This section sets up the entity components",
+    "minecraft:entity": {}
+  }
 }
 ```
-
-Each element is a templated string, so you can conditionally add modules like this:
-
-```json
-{
-  "$extend": ["{{"{{=someCondition ? ['module_name'] : []"}}}}"]
-}
-```
-
-For more information on modules, refer to the [Modules](modules.md) section.

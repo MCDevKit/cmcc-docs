@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: Merge operations
-nav_order: 5
+nav_order: 6
 ---
 
 # Merge Operations

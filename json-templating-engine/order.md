@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: Order of operations
-nav_order: 8
+nav_order: 7
 ---
 
 # Order of Operations in JSON Templates

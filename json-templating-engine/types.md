@@ -2,12 +2,12 @@
 layout: page
 parent: JSON Templating Engine
 title: Basic types
-nav_order: 4
+nav_order: 0
 ---
 
 # Basic Data Types
 
-JsonTE supports all fundamental data types found in JSON, as well as an additional `semver` type for representing [semantic versioning](https://semver.org/). The basic data types in JsonTE are:
+JsonTE supports all fundamental data types found in JSON, an additional `semver` type for representing [semantic versioning](https://semver.org/), and a `lambda` type for inline functions. The data types in JsonTE are:
 - `null`
 - `boolean`
 - `number`
@@ -15,10 +15,13 @@ JsonTE supports all fundamental data types found in JSON, as well as an addition
 - `array`
 - `object`
 - `semver`
+- `lambda`
 
 ## `null`
 
 The `null` type represents the absence of a value and can be used to remove a key from an object.
+
+When a key is set to `null` inside a `$template`, it is omitted from the output. This is useful for conditionally removing keys when [merging](merge-operations.md).
 
 ## `boolean`
 
@@ -86,3 +89,39 @@ Patch version:
 - `z`
 
 Refer to the [Semver Functions](semver-functions/index.md) section to learn how to create a `semver` type in JsonTE.
+
+## `lambda`
+
+The `lambda` type represents an inline function. Lambdas are created with the `=>` arrow syntax and are used as arguments to higher-order functions such as `map`, `filter`, `reduce`, and `sort`.
+
+Single-parameter lambda:
+
+```json
+{
+  "$template": {
+    "doubled": "{{"{{=[1, 2, 3].map(x => x * 2)"}}}}"
+  }
+}
+```
+
+Multi-parameter lambda:
+
+```json
+{
+  "$template": {
+    "pairs": "{{"{{=[[1, 2], [3, 4]].map((a, b) => a + b)"}}}}"
+  }
+}
+```
+
+Lambdas can also have block bodies with `return`:
+
+```json
+{
+  "$template": {
+    "evens": "{{"{{=[1, 2, 3, 4, 5].filter(x => { return x % 2 == 0; })"}}}}"
+  }
+}
+```
+
+A lambda value itself cannot be embedded directly in template output - it must be called or passed to a function.

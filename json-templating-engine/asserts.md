@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: Assertions
-nav_order: 3
+nav_order: 8
 ---
 
 # Assertions

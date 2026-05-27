@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: Basic Actions
-nav_order: 0
+nav_order: 3
 ---
 
 # Basic Actions
@@ -31,6 +31,8 @@ If the current iteration element is an object, its properties will be directly a
 ## Predicate
 
 A Predicate action includes its value only if the condition within it evaluates to true. To use this action, begin the template string with a question mark: `{{"{{?condition"}}}}`.
+
+When used inside an object template, the value at the predicate key must itself be an object - its properties are merged into the enclosing object only if the condition is true. When used inside an array template, any element type is accepted and the element is included or excluded as a whole.
 
 ## Example Using All Actions
 
