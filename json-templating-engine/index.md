@@ -13,10 +13,11 @@ Several other file types are also supported:
 | Extension     | Expression syntax | Notes                                                                                           |
 | ------------- | ----------------- | ----------------------------------------------------------------------------------------------- |
 | `.templ`      | `{{...}}`         | Primary format - full JSON template support.                                                    |
+| `.modl`       | `{{...}}`         | Module file - merged into other templates instead of being generated. See [Modules](modules.md). |
 | `.jsonte`     | (script)          | Script file executed against the scope before templates run. See [Scripting](scripting.md).     |
-| `.mcfunction` | `#{...}`          | Minecraft function file - inline expression substitution.                                       |
-| `.molang`     | `#{...}`          | Molang file - `# ` line comments are stripped and the output is minified.                      |
-| `.lang`       | `##{...}`         | Minecraft lang file - line-by-line expression substitution.                                     |
+| `.mcfunction` | `#{...}`          | Minecraft function file - see [Other File Types](file-types.md).                                   |
+| `.molang`     | `#{...}`          | Molang file - comments stripped, output minified. See [Other File Types](file-types.md).                  |
+| `.lang`       | `##{...}`         | Minecraft lang file - see [Other File Types](file-types.md).                                 |
 
 To access an interactive tutorial, [click here](https://mcdevkit.com/tutorial).
 

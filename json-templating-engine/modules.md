@@ -11,7 +11,7 @@ Modules are pre-defined templates that are not directly generated into the outpu
 
 ## Defining a Module
 
-A module is a `.templ` file with a `$module` key that gives it a name:
+A module is a `.modl` file with a `$module` key that gives it a name. Module files use the same `{{...}}` expression syntax as templates, but they are loaded for use by other templates instead of being generated into the output:
 
 ```jsonc
 {
@@ -66,6 +66,36 @@ To copy multiple files, pass an array - they are merged in order:
 ```json
 {
   "$copy": ["path/to/base.json", "path/to/override.json"]
+}
+```
+
+## Accessing Modules from Expressions
+
+Two pseudo-variables expose the project's modules to template expressions:
+
+- `$allModules` - every module loaded in the project, whether or not it is used by the current template. Always available.
+- `$modules` - only the modules applied to the current template through `$extend`. Available only when `$extend` is used.
+
+Both are objects keyed by module name. Use `keys($allModules)` to list the available module names. Each entry exposes the following fields:
+
+| Field      | Description                                                          |
+| ---------- | -------------------------------------------------------------------- |
+| `Name`     | The module's name (its `$module` value).                             |
+| `Scope`    | The module's `$scope` object.                                        |
+| `Template` | The module's `$template` content.                                    |
+| `Copy`     | The module's `$copy` value, or an empty string if it has none.       |
+
+Note that the field names are capitalized.
+
+```json
+{
+  "$extend": "simple",
+  "$template": {
+    "$comment": "List the modules applied to this template",
+    "appliedModules": "{{"{{=keys($modules)"}}}}",
+    "$comment2": "Read a value from a module's scope",
+    "moduleValue": "{{"{{=$modules.simple.Scope.asd"}}}}"
+  }
 }
 ```
 

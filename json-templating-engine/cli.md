@@ -2,7 +2,7 @@
 layout: page
 parent: JSON Templating Engine
 title: CLI options
-nav_order: 10
+nav_order: 11
 ---
 
 # CLI Options
@@ -23,6 +23,7 @@ These options can be used with any action:
 - `--safe-mode`: Disable functions that are marked as unsafe (primarily file system functions). Useful when running templates from untrusted sources.
 - `--server-mode`: Disable functions that require the Minecraft client to be installed (e.g. `getMinecraftInstallDir`). Intended for server-side or CI environments.
 - `--workers`: Set the maximum number of concurrent workers used during compilation. Defaults to `1`.
+- `--cpu-profile`: Write a CPU profile to a file. Intended for diagnosing performance.
 
 ## Actions
 
@@ -53,6 +54,16 @@ The `eval` action evaluates an expression and prints the result to the console. 
 jsonte eval "pi()"
 ```
 
+### `script`
+
+The `script` action runs a [`.jsonte` script file](scripting.md) against the scope and prints the resulting scope to the console.
+
+**Usage:**
+
+```sh
+jsonte script ./my_script.jsonte
+```
+
 ### `version`
 
 The `version` action displays the engine version in the console.
@@ -70,3 +81,14 @@ jsonte ipc
 **Options:**
 
 - `--ipc-name`: Set the named pipe's name. Defaults to `jsonte`.
+
+### `help`
+
+The `help` action shows help for the built-in functions. Run without arguments for usage, `functions` for the full list, or pass a function or group name for details.
+
+**Usage:**
+
+```sh
+jsonte help functions
+jsonte help substring
+```
