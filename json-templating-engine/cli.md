@@ -43,6 +43,7 @@ jsonte compile --out ./result ./src
 - `--include`: Add a file or directory to the include list using a glob pattern. Can be used multiple times. Takes precedence over the exclude list.
 - `--exclude`: Add a file or directory to the exclude list using a glob pattern. Can be used multiple times.
 - `--remove-src`: Remove source templates after compilation. Primarily used for the Regolith filter.
+- `--disable-molang-validation`: Output processed `.molang` files that are not valid Molang instead of stopping with an error. See [Other File Types](file-types.md#molang).
 
 ### `eval`
 
@@ -56,12 +57,12 @@ jsonte eval "pi()"
 
 ### `script`
 
-The `script` action runs a [`.jsonte` script file](scripting.md) against the scope and prints the resulting scope to the console.
+The `script` action runs a [`.jsonte` script file](scripting.md) against the scope and prints the value returned by the script to the console.
 
 **Usage:**
 
 ```sh
-jsonte script ./my_script.jsonte
+jsonte script --scope ./data ./my_script.jsonte
 ```
 
 ### `version`

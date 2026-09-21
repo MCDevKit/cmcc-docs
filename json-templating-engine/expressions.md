@@ -31,6 +31,36 @@ JSON templates support object and array literals, enabling you to create complex
 }
 ```
 
+If a key has the same name as the variable that holds its value, you can write only the name. `{name, count}` is the same as `{'name': name, 'count': count}`:
+
+```json
+{
+  "$template": {
+    "key": "{{"{{{name, count"}}}}}"
+  }
+}
+```
+
+To compute a key from an expression, put the expression in square brackets. With `value` equal to `1`, the example below creates the object `{"key_1": 1}`:
+
+```json
+{
+  "$template": {
+    "key": "{{"{{{['key_' + value]: value"}}}}}"
+  }
+}
+```
+
+## Number Literals
+
+Besides regular integers and decimals, numbers can be written in these forms:
+
+| Form                           | Example        | Value       |
+| ------------------------------ | -------------- | ----------- |
+| Hexadecimal                    | `0x1F`         | 31          |
+| Scientific notation            | `1e3`, `25e-2` | 1000, 0.25  |
+| Decimal without a leading zero | `.5`           | 0.5         |
+
 ## Backtick Template Strings
 
 Backtick strings (`` ` `` ... `` ` ``) are multi-part strings with embedded expressions using `${...}` interpolation. Unlike the `{{...}}` notation used in JSON template keys and values, backtick strings let you embed multiple expressions inline within a single string expression:
@@ -76,7 +106,7 @@ Lambdas can have a block body with multiple statements using `return` to produce
 ```json
 {
   "$template": {
-    "result": "{{"{{=[1, 2, 3, 4].filter(x => { return x % 2 == 0; })"}}}}"
+    "result": "{{"{{=[1, 2, 3, 4].filter(x => { return mod(x, 2) == 0; })"}}}}"
   }
 }
 ```

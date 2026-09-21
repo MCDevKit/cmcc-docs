@@ -18,6 +18,9 @@ JSON templates support the standard arithmetic operators:
 | `*`      | Multiplication |                                                                           |
 | `/`      | Division       | Integer division when both operands are integers                          |
 | `-x`     | Unary negation |                                                                           |
+| `+x`     | Unary plus     | Returns the number unchanged                                              |
+
+There is no `%` operator. Use the `mod(a, b)` function instead.
 
 ## Range Operator
 
@@ -41,6 +44,17 @@ The ternary operator evaluates a condition and returns one of two values based o
 {
   "$template": {
     "key": "{{"{{condition ? valueIfTrue : valueIfFalse"}}}}"
+  }
+}
+```
+
+The `: valueIfFalse` part is optional. Without it, the expression returns `null` when the condition is falsy:
+
+```json
+{
+  "$template": {
+    "$comment": "'yes' when enabled is truthy, null otherwise",
+    "key": "{{"{{enabled ? 'yes'"}}}}"
   }
 }
 ```
@@ -83,6 +97,20 @@ The optional chaining operator (`?.`) safely accesses a property or index, retur
 
 Without `?`, accessing a missing field or a field on `null` throws an error. With `?`, the result is `null`. For example, `{}.missing` is an error, while `{}?.missing` returns `null`.
 
+## Array Slicing
+
+Indexing an array with a range returns a new array with the elements at those indices. Negative indices count from the end of the array. An index outside the array causes an error.
+
+```json
+{
+  "$template": {
+    "$comment": "With list equal to [10, 20, 30, 40], first is [20, 30] and last is [30, 40]",
+    "first": "{{"{{=list[1..2]"}}}}",
+    "last": "{{"{{=list[-2..-1]"}}}}"
+  }
+}
+```
+
 ## Spread Operator
 
 The spread operator (`...`) expands an array into individual elements. It can be used in array literals and in function calls.
@@ -115,6 +143,14 @@ Assignment operators are used in [scripting contexts](scripting.md) and in the `
 | -------- | ------------------------------- |
 | `=`      | Assign a value                  |
 | `+=`     | Add and assign (or concatenate) |
+| `-=`     | Subtract and assign             |
+| `*=`     | Multiply and assign             |
+| `/=`     | Divide and assign               |
+| `%=`     | Assign the remainder            |
+| `++`     | Increment by one                |
+| `--`     | Decrement by one                |
+
+`/=` and `%=` with integers and a divisor of zero produce `NaN`.
 
 ```json
 {
@@ -150,6 +186,25 @@ JSON templates support the following comparison operators. Note that `==` perfor
 }
 ```
 
+## `in` Operator
+
+The `in` operator checks whether a value is contained in another value:
+
+- For an object, it checks whether the object has the key.
+- For an array, it checks whether the array has the element.
+- For a string, it checks whether the string contains the substring.
+
+```json
+{
+  "$template": {
+    "$comment": "All values below are true",
+    "hasKey": "{{"{{'x' in {'x': 1}"}}}}",
+    "hasElement": "{{"{{20 in [10, 20]"}}}}",
+    "hasSubstring": "{{"{{'ell' in 'hello'"}}}}"
+  }
+}
+```
+
 ## Logical Operators
 
 | Operator | Description  | Notes                                                                                     |
@@ -181,3 +236,24 @@ The following values are considered falsy:
 - `''` (empty string, or a string containing only newlines and carriage returns)
 
 All other values are truthy. In particular, `semver` values are always truthy regardless of their version number.
+
+## Operator Precedence
+
+Operators are evaluated in the order below, from the highest to the lowest precedence. Use parentheses to change the order.
+
+| Operators                                    | Description                                                     |
+| -------------------------------------------- | --------------------------------------------------------------- |
+| `.`, `?.`, `[]`, `?[]`, `()`, `++`, `--`     | Member access, indexing, function calls, increment, decrement   |
+| `-x`, `+x`, `!`                              | Unary minus, unary plus, logical not                            |
+| `*`, `/`                                     | Multiplication and division                                     |
+| `+`, `-`                                     | Addition and subtraction                                        |
+| `..`                                         | Range                                                           |
+| `<`, `<=`, `>`, `>=`, `in`                   | Comparison and containment                                      |
+| `==`, `!=`                                   | Equality                                                        |
+| `&&`                                         | Logical AND                                                     |
+| `\|\|`                                       | Logical OR                                                      |
+| `??`                                         | Null coalescing                                                 |
+| `? :`                                        | Ternary                                                         |
+| `=`, `+=`, `-=`, `*=`, `/=`, `%=`            | Assignment                                                      |
+
+For example, `1 < 2 == true` is `true`, because the comparison is evaluated before the equality. `null ?? 1 == 2` is `false`, because `1 == 2` is evaluated before `??`.
