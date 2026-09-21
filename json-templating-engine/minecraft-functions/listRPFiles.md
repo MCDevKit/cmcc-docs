@@ -8,6 +8,8 @@ title: listRPFiles
 # listRPFiles
 
 Returns an array of paths to the latest files in resource pack within given path.
+
+Files stored inside a `.brarchive` (newer Minecraft versions) are returned as `<archive>.brarchive#/<file name>` paths.
 ## Arguments
 
 - `path` - The path to the directory inside resource pack.

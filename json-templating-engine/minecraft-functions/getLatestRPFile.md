@@ -9,6 +9,8 @@ title: getLatestRPFile
 
 Returns a path to the latest resource pack file.
 
+If the file is stored inside a `.brarchive` (newer Minecraft versions), the returned path has the form `<archive>.brarchive#/<file name>`. Such paths can be used with `load`, `loadText`, `fileExists` and other file functions.
+
 **This method is marked as unsafe. It can be disabled in certain environments.**
 ## Arguments
 
